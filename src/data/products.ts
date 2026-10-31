@@ -13,17 +13,18 @@ export const PRODUCTS: Product[] = [
     isBestSeller: true,
     isNewRelease: true,
     description: 'T-Shirt grafis ikonik BDG SKULL dengan artwork tengkorak berbalut scarf/bandana tartan khas kultur casuals suporter. Menggunakan material Cotton Combed 24s berkualitas tinggi yang sejuk, nyaman, dan menyerap keringat. Tersedia dalam pilihan warna Black & White.',
-    material: '100% Cotton Combed 24s Soft Reaktif',
-    printType: 'High Quality Plastisol Screen Print',
+    material: 'Cotton Combed 24s',
+    printType: 'Plastisol',
+    cutting: 'Regular Fit',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     inStock: true,
     stockCount: 40,
     features: [
-      'Grafis ikonik tengkorak berbalut syal tartan khas casuals matchday',
-      'Tersedia varian warna Hitam dan Putih',
-      'Bahan Cotton Combed 24s adem, halus, dan tidak kaku',
-      'Sablon plastisol detail presisi tahan cuci berkali-kali',
-      'Jahitan rantai pundak standar distro berkualitas'
+      'Bahan: Cotton Combed 24s (adem, nyaman, menyerap keringat)',
+      'Sablon: Plastisol awet, tajam, dan tidak mudah pecah',
+      'Cutting: Regular Fit yang pas dan nyaman dipakai harian',
+      'Artwork eksklusif tengkorak bandana tartan khas casuals',
+      'Tersedia pilihan warna Hitam & Putih'
     ],
     shopeeUrl: 'https://shopee.co.id/dim4swelah'
   },

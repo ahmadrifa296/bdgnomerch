@@ -309,6 +309,12 @@ export const ProductDetailPage: React.FC = () => {
                 <span className="text-gray-400">Tipe Sablon / Patch:</span>
                 <span className="text-white font-medium">{product.printType}</span>
               </div>
+              {product.cutting && (
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-gray-400">Pola / Cutting:</span>
+                  <span className="text-white font-medium">{product.cutting}</span>
+                </div>
+              )}
               <div className="flex justify-between py-1">
                 <span className="text-gray-400">Kota Produksi:</span>
                 <span className="text-white font-medium">Bandung, Jawa Barat</span>
