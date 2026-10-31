@@ -2,6 +2,32 @@ import type { Product, FaqItem } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'bdg-006',
+    name: 'T-Shirt BDG SKULL',
+    slug: 't-shirt-bdg-skull',
+    price: 110000,
+    originalPrice: 135000,
+    category: 'T-Shirt',
+    image: '/products/bdg-skull.jpg',
+    tags: ['BDG Skull', 'New Release', 'Casuals Culture'],
+    isBestSeller: true,
+    isNewRelease: true,
+    description: 'T-Shirt grafis ikonik BDG SKULL dengan artwork tengkorak berbalut scarf/bandana tartan khas kultur casuals suporter. Menggunakan material Cotton Combed 24s berkualitas tinggi yang sejuk, nyaman, dan menyerap keringat. Tersedia dalam pilihan warna Black & White.',
+    material: '100% Cotton Combed 24s Soft Reaktif',
+    printType: 'High Quality Plastisol Screen Print',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    inStock: true,
+    stockCount: 40,
+    features: [
+      'Grafis ikonik tengkorak berbalut syal tartan khas casuals matchday',
+      'Tersedia varian warna Hitam dan Putih',
+      'Bahan Cotton Combed 24s adem, halus, dan tidak kaku',
+      'Sablon plastisol detail presisi tahan cuci berkali-kali',
+      'Jahitan rantai pundak standar distro berkualitas'
+    ],
+    shopeeUrl: 'https://shopee.co.id/dim4swelah'
+  },
+  {
     id: 'bdg-010',
     name: '10 Pcs Sticker Pack "Ex Undis Sol"',
     slug: '10-pcs-sticker-pack-ex-undis-sol',
