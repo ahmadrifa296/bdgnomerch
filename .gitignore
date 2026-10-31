@@ -33,3 +33,7 @@ Thumbs.db
 
 # Vercel CLI cache
 .vercel/
+
+# AI Agents & Antislop skills (Local only)
+.agents/
+AGENTS.md
