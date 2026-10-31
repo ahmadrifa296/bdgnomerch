@@ -136,7 +136,7 @@ export const AboutPage: React.FC = () => {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-200 hover:text-pink-300 text-xs sm:text-sm font-semibold border border-white/10 transition-colors"
           >
             <InstagramIcon className="w-4 h-4" />
-            <span>@bdgboysmerch</span>
+            <span>@bdgnomercyy</span>
           </a>
         </div>
       </div>

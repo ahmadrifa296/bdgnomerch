@@ -6,8 +6,8 @@ import {
   Send, 
   ExternalLink
 } from 'lucide-react';
-import { InstagramIcon } from '../components/ui/Icons';
-import { getBrandName, getInstagramUrl, getWhatsAppNumber } from '../utils/whatsapp';
+import { InstagramIcon, ShopeeIcon } from '../components/ui/Icons';
+import { getBrandName, getInstagramUrl, getWhatsAppNumber, getShopeeStoreUrl } from '../utils/whatsapp';
 
 export const ContactPage: React.FC = () => {
   const brandName = getBrandName();
@@ -120,9 +120,9 @@ export const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-sm">Alamat Pick-up & Studio</h4>
+                  <h4 className="font-bold text-white text-sm">Alamat Workshop & Pengiriman</h4>
                   <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">
-                    Kawasan Trunojoyo - Dago Creative Hub, Kota Bandung, Jawa Barat 40115, Indonesia
+                    Kota Jambi, Provinsi Jambi, Indonesia
                   </p>
                 </div>
               </div>
@@ -153,6 +153,24 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 border border-orange-500/30">
+                  <ShopeeIcon className="w-5 h-5 fill-current" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-white text-sm">Shopee Official Store</h4>
+                  <a
+                    href={getShopeeStoreUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-orange-400 hover:text-orange-300 flex items-center gap-1 mt-0.5 font-mono"
+                  >
+                    <span>@dim4swelah</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
                 <div className="w-9 h-9 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/30">
                   <InstagramIcon className="w-5 h-5" />
                 </div>
@@ -164,7 +182,7 @@ export const ContactPage: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1 mt-0.5 font-mono"
                   >
-                    <span>@bdgboysmerch</span>
+                    <span>@bdgnomercyy</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -174,9 +192,9 @@ export const ContactPage: React.FC = () => {
 
           {/* Map / Origin Note */}
           <div className="p-6 rounded-2xl bg-[#0b1426] border border-blue-900/30 space-y-2">
-            <h3 className="font-bold text-white text-sm font-['Outfit']">Pusat Distribusi Distro Bandung</h3>
+            <h3 className="font-bold text-white text-sm font-['Outfit']">Pusat Distribusi & Pengiriman</h3>
             <p className="text-xs text-gray-400 leading-relaxed">
-              Pengiriman setiap hari kerja menggunakan JNE, J&T, SiCepat, serta kurir instan Gosend dan Grab untuk area Bandung Raya.
+              Pengiriman setiap hari kerja menggunakan ekspedisi resmi JNE, J&T, dan SiCepat ke seluruh wilayah Indonesia.
             </p>
           </div>
         </div>

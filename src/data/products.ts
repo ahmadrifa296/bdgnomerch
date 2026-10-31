@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
       'Laminasi doff premium tidak mudah pudar atau sobek',
       'Dikemas rapi dalam zip-lock pouch hitam eksklusif Ex Undis Sol'
     ],
-    shopeeUrl: 'https://shopee.co.id/bdgnomercyy'
+    shopeeUrl: 'https://shopee.co.id/Sticker-Persib-Casual-Ex-Undis-Sol-Bandung-i.713581501.41834547390?extraParams=%7B%22display_model_id%22%3A311528753052%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134207-8258v-mtatzv9c70ua13'
   },
   {
     id: 'bdg-001',
@@ -75,7 +75,7 @@ export const PRODUCTS: Product[] = [
       'Sablon discharge menyatu dengan serat kain',
       'Official woven label BDG BOYS MERCH di sisi bawah'
     ],
-    shopeeUrl: 'https://shopee.co.id/bdgnomercyy'
+    shopeeUrl: 'https://shopee.co.id/dim4swelah'
   },
   {
     id: 'bdg-003',
@@ -165,11 +165,11 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'Apakah produk di website ini ready stock?',
-    answer: 'Semua artikel yang berstatus Ready Stock siap dikirim langsung dari studio workshop kami di Bandung. Jika ukuran habis, tombol pemesanan akan menginfokan status pre-order atau restock berikutnya.'
+    answer: 'Semua artikel yang berstatus Ready Stock siap dikirim langsung dari workshop kami. Jika ukuran habis, tombol pemesanan akan menginfokan status pre-order atau restock berikutnya.'
   },
   {
     question: 'Apakah bisa memesan lewat Shopee?',
-    answer: 'Ya! Untuk artikel seperti Sticker Pack dan merchandise resmi lainnya, Anda juga dapat memesan langsung melalui Shopee Official Store kami di shopee.co.id/bdgnomercyy.'
+    answer: 'Ya! Untuk artikel seperti Sticker Pack dan merchandise resmi lainnya, Anda juga dapat memesan langsung melalui Shopee Official Store kami di shopee.co.id/dim4swelah.'
   },
   {
     question: 'Metode pembayaran dan rekening resmi apa saja yang didukung?',
@@ -177,10 +177,10 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'Berapa lama estimasi pengiriman pesanan?',
-    answer: 'Pesanan terverifikasi sebelum jam 16.00 WIB dikirim pada hari yang sama. Pengiriman menggunakan ekspedisi resmi (JNE, J&T, SiCepat) dengan estimasi Jawa Barat 1 hari kerja, Pulau Jawa 1-2 hari kerja, dan luar Jawa 2-4 hari kerja.'
+    answer: 'Pesanan terverifikasi sebelum jam 16.00 WIB dikirim pada hari yang sama. Pengiriman menggunakan ekspedisi resmi (JNE, J&T, SiCepat) dengan estimasi pengiriman cepat ke seluruh wilayah Indonesia.'
   },
   {
-    question: 'Apakah ada jaminan tukar ukuran jika tidak pas?',
-    answer: 'Kami melayani penukaran ukuran kaos maksimal 2 hari setelah paket diterima. Syaratnya kondisi baju belum dicuci, hangtag label masih terpasang utuh, dan stok ukuran pengganti tersedia.'
+    question: 'Apakah produk yang sudah dibeli bisa ditukar ukuran atau diretur?',
+    answer: 'Mohon maaf, kami tidak melayani penukaran ukuran (tukar size) maupun retur produk setelah pesanan diproses dan dikirim. Pastikan Anda telah memeriksa panduan ukuran (size chart) pada setiap artikel kaos sebelum memesan.'
   }
 ];

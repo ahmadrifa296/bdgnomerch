@@ -6,7 +6,6 @@ import {
   Ruler, 
   ShieldCheck, 
   Truck, 
-  RotateCcw, 
   CheckCircle2, 
   Plus, 
   Minus,
@@ -259,7 +258,7 @@ export const ProductDetailPage: React.FC = () => {
                 className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#ee4d2d] hover:bg-[#d73211] text-white font-bold text-sm shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400"
               >
                 <ShopeeIcon className="w-5 h-5 fill-current" />
-                <span>Beli di Shopee Official (@bdgnomercyy)</span>
+                <span>Beli Langsung di Shopee Official</span>
               </a>
             )}
 
@@ -286,11 +285,11 @@ export const ProductDetailPage: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Bisa Kirim Hari Ini</span>
+              <span>Pengiriman Cepat</span>
             </div>
             <div className="flex items-center gap-2">
-              <RotateCcw className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Garansi Tukar Size</span>
+              <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>Quality Control Rapi</span>
             </div>
           </div>
 

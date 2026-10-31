@@ -5,7 +5,7 @@
 
 const DEFAULT_PHONE = '6281234567890';
 const DEFAULT_BRAND_NAME = 'BDG BOYS MERCH';
-const DEFAULT_INSTAGRAM = 'https://instagram.com/bdgboysmerch';
+const DEFAULT_INSTAGRAM = 'https://www.instagram.com/bdgnomercyy/';
 
 export const getBrandName = (): string => {
   return import.meta.env.VITE_BRAND_NAME || DEFAULT_BRAND_NAME;
@@ -24,11 +24,13 @@ export const getInstagramUrl = (): string => {
   return import.meta.env.VITE_INSTAGRAM_URL || DEFAULT_INSTAGRAM;
 };
 
-const DEFAULT_SHOPEE_URL = 'https://shopee.co.id/bdgnomercyy';
+const DEFAULT_SHOPEE_URL = 'https://shopee.co.id/dim4swelah';
 
 export const getShopeeStoreUrl = (): string => {
   return import.meta.env.VITE_SHOPEE_URL || DEFAULT_SHOPEE_URL;
 };
+
+export const STICKER_SHOPEE_URL = 'https://shopee.co.id/Sticker-Persib-Casual-Ex-Undis-Sol-Bandung-i.713581501.41834547390?extraParams=%7B%22display_model_id%22%3A311528753052%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134207-8258v-mtatzv9c70ua13';
 
 export const formatPriceIDR = (price: number): string => {
   return new Intl.NumberFormat('id-ID', {

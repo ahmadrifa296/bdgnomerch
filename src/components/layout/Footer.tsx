@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-orange-500/20 hover:text-orange-400 border border-white/10 flex items-center justify-center transition-all duration-200"
                 aria-label="Shopee Official Store"
-                title="Official Shopee Store @bdgnomercyy"
+                title="Official Shopee Store @dim4swelah"
               >
                 <ShopeeIcon className="w-5 h-5 fill-current" />
               </a>
@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
                   className="hover:text-orange-400 text-orange-400/90 transition-colors flex items-center gap-1.5 font-medium"
                 >
                   <ShopeeIcon className="w-3.5 h-3.5 fill-current text-orange-400" />
-                  <span>Shopee @bdgnomercyy</span>
+                  <span>Shopee @dim4swelah</span>
                 </a>
               </li>
             </ul>
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <span>Jl. Trunojoyo - Dago Area, Kota Bandung, Jawa Barat 40115</span>
+                <span>Kota Jambi, Provinsi Jambi, Indonesia</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 text-amber-400 shrink-0" />
@@ -158,7 +158,7 @@ export const Footer: React.FC = () => {
 
             <div className="mt-4 p-3 rounded-xl bg-blue-950/40 border border-blue-800/30">
               <p className="text-xs text-blue-200">
-                <strong className="text-white">Pengiriman Cepat:</strong> JNE, J&T, SiCepat, dan Gosend/Grab Instant untuk wilayah Bandung.
+                <strong className="text-white">Pengiriman Cepat:</strong> Ekspedisi resmi JNE, J&T, dan SiCepat ke seluruh wilayah Indonesia.
               </p>
             </div>
           </div>

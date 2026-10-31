@@ -7,7 +7,6 @@ import {
   ShieldCheck,
   Truck,
   Layers,
-  RotateCcw,
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
@@ -92,15 +91,15 @@ export const HomePage: React.FC = () => {
                 <Truck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Kirim Hari Ini</h4>
-                  <p className="text-[11px] text-gray-400">JNE, J&T, SiCepat, Gosend</p>
+                  <p className="text-[11px] text-gray-400">JNE, J&T, SiCepat</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <RotateCcw className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Tukar Ukuran</h4>
-                  <p className="text-[11px] text-gray-400">Garansi tukar size kaos 2 hari</p>
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Quality Control</h4>
+                  <p className="text-[11px] text-gray-400">Inspeksi rapi sebelum kirim</p>
                 </div>
               </div>
             </div>
@@ -205,7 +204,7 @@ export const HomePage: React.FC = () => {
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-200 hover:text-pink-300 font-semibold text-xs sm:text-sm border border-white/10 transition-colors"
                 >
                   <InstagramIcon className="w-4 h-4" />
-                  <span>Instagram @bdgboysmerch</span>
+                  <span>Instagram @bdgnomercyy</span>
                 </a>
               </div>
             </div>

@@ -1,64 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ShoppingBag, 
   MessageCircle, 
   CreditCard, 
   Truck, 
-  Check, 
-  Copy, 
-  ShieldCheck
+  ShieldCheck,
+  ArrowRight
 } from 'lucide-react';
-import { getWhatsAppGeneralUrl, getBrandName, getWhatsAppNumber } from '../utils/whatsapp';
+import { ShopeeIcon } from '../components/ui/Icons';
+import { getWhatsAppGeneralUrl, getBrandName, getShopeeStoreUrl } from '../utils/whatsapp';
 
 export const OrderGuidePage: React.FC = () => {
-  const [copied, setCopied] = useState(false);
   const brandName = getBrandName();
-  const waNumber = getWhatsAppNumber();
-
-  const templateFormat = `Halo Admin ${brandName}! 👋
-Saya ingin order merchandise:
-- Nama Produk: 
-- Size / Ukuran: 
-- Jumlah (Pcs): 1
-- Nama Lengkap: 
-- No. WhatsApp: 
-- Alamat Lengkap & Kode Pos: 
-- Ekspedisi (JNE/J&T/SiCepat): 
-
-Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(templateFormat);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
-  };
+  const shopeeStoreUrl = getShopeeStoreUrl();
 
   const steps = [
     {
       step: '01',
       title: 'Pilih Produk & Ukuran',
-      desc: 'Buka halaman Katalog, pilih artikel merchandise yang kamu inginkan, dan tentukan ukuran yang pas sesuai size chart.',
+      desc: 'Buka halaman Katalog, pilih artikel t-shirt atau sticker pack yang kamu inginkan, dan tentukan ukuran sesuai size chart (khusus kaos).',
       icon: ShoppingBag,
       color: 'text-blue-400 bg-blue-500/10 border-blue-500/30'
     },
     {
       step: '02',
-      title: 'Klik Tombol WhatsApp',
-      desc: 'Klik "Order via WhatsApp" pada produk, atau salin format pemesanan. Kamu akan langsung terhubung ke chat admin resmi.',
+      title: 'WhatsApp atau Shopee',
+      desc: 'Klik tombol "Order via WhatsApp" untuk chat langsung dengan admin, atau klik "Beli di Shopee Official" untuk transaksi via marketplace.',
       icon: MessageCircle,
       color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30'
     },
     {
       step: '03',
       title: 'Konfirmasi & Pembayaran',
-      desc: 'Admin akan memeriksa ketersediaan stok, menghitung total ongkos kirim ke kotamu, dan mengirimkan nomor rekening resmi.',
+      desc: 'Untuk pemesanan WhatsApp, admin akan mengonfirmasi ketersediaan stok, ongkir ke kotamu, dan mengirim rekening resmi store.',
       icon: CreditCard,
       color: 'text-amber-400 bg-amber-500/10 border-amber-500/30'
     },
     {
       step: '04',
       title: 'Pengiriman & Resi',
-      desc: 'Setelah pembayaran terverifikasi, barang dipacking rapi dan dikirim hari itu juga. Nomor resi otomatis dikirim via WhatsApp.',
+      desc: 'Setelah pembayaran terverifikasi, pesanan dipacking rapi dan dikirim via ekspedisi. Nomor resi pengiriman akan segera diinfokan.',
       icon: Truck,
       color: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/30'
     }
@@ -72,11 +54,42 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
           Panduan Praktis
         </span>
         <h1 className="text-3xl sm:text-5xl font-black text-white font-['Outfit']">
-          CARA PEMESANAN VIA WHATSAPP
+          CARA PEMESANAN MERCHANDISE
         </h1>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Order langsung ke official CS {brandName} dalam hitungan menit tanpa perlu repot registrasi akun.
+          Order langsung ke official CS {brandName} via WhatsApp atau Shopee Official Store resmi.
         </p>
+
+        {/* Quick Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+          <Link
+            to="/catalog"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition-colors"
+          >
+            <span>Buka Katalog Produk</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+
+          <a
+            href={shopeeStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-lg shadow-orange-600/30 transition-colors"
+          >
+            <ShopeeIcon className="w-4 h-4 fill-current" />
+            <span>Kunjungi Toko Shopee</span>
+          </a>
+
+          <a
+            href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau pesan merchandise.')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition-colors"
+          >
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span>Chat Admin WhatsApp</span>
+          </a>
+        </div>
       </div>
 
       {/* 4 Step Cards */}
@@ -103,59 +116,6 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
         })}
       </div>
 
-      {/* Copyable WhatsApp Order Format */}
-      <div className="p-6 sm:p-8 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-black text-white font-['Outfit']">
-              Format Chat WhatsApp Cepat
-            </h2>
-            <p className="text-xs sm:text-sm text-gray-400 mt-1">
-              Kamu juga bisa menyalin format teks di bawah ini dan langsung mengirimkannya ke WhatsApp kami (+{waNumber}).
-            </p>
-          </div>
-
-          <button
-            onClick={handleCopy}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/30 transition-colors shrink-0"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4 text-emerald-300" />
-                <span>Format Berhasil Disalin!</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" />
-                <span>Salin Format Pesan</span>
-              </>
-            )}
-          </button>
-        </div>
-
-        {/* Code Block Display */}
-        <div className="p-4 rounded-xl bg-[#070e1b] border border-blue-900/40 font-mono text-xs text-blue-300 leading-relaxed whitespace-pre-wrap select-all">
-          {templateFormat}
-        </div>
-
-        <div className="flex items-center justify-between flex-wrap gap-4 pt-2">
-          <span className="text-xs text-gray-400 flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            Pembayaran hanya melalui rekening resmi yang diinfokan CS kami.
-          </span>
-
-          <a
-            href={getWhatsAppGeneralUrl(templateFormat)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-xs shadow-md transition-colors"
-          >
-            <MessageCircle className="w-4 h-4 fill-current" />
-            <span>Kirim Format ke WhatsApp</span>
-          </a>
-        </div>
-      </div>
-
       {/* Payment & Shipping Logos Info */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-3">
@@ -180,14 +140,24 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
             Jasa Ekspedisi Pengiriman
           </h3>
           <p className="text-xs text-gray-400 leading-relaxed">
-            Setiap paket dikemas dalam polymailer waterproof tebal + bonus stiker pack gratis. Pengiriman setiap hari Senin hingga Sabtu pukul 16.00 WIB.
+            Setiap paket dikemas dalam polymailer waterproof tebal + bonus stiker pack gratis. Pengiriman setiap hari kerja pukul 16.00 WIB.
           </p>
           <div className="pt-2 flex flex-wrap gap-2 text-[11px] font-bold">
             <span className="px-3 py-1 rounded-lg bg-white/5 text-gray-200 border border-white/10">JNE Express</span>
             <span className="px-3 py-1 rounded-lg bg-white/5 text-gray-200 border border-white/10">J&T Express</span>
             <span className="px-3 py-1 rounded-lg bg-white/5 text-gray-200 border border-white/10">SiCepat</span>
-            <span className="px-3 py-1 rounded-lg bg-white/5 text-gray-200 border border-white/10">Gosend / Grab (Bandung)</span>
           </div>
+        </div>
+      </div>
+
+      {/* Syarat Penting: No Exchange Notice */}
+      <div className="p-6 rounded-2xl bg-blue-950/30 border border-blue-900/40 flex items-start gap-3.5">
+        <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+        <div className="text-xs text-gray-300 space-y-1">
+          <p className="font-bold text-white">Ketentuan Pemesanan:</p>
+          <p className="leading-relaxed text-gray-400">
+            Seluruh pesanan diperiksa kualitasnya (Quality Control) sebelum dikemas dan dikirim. Harap perhatikan size chart kaos dengan teliti sebelum memesan, karena kami tidak melayani penukaran ukuran (tukar size) atau retur barang setelah pesanan dikirim.
+          </p>
         </div>
       </div>
     </div>

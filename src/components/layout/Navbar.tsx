@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Shopee Official BDG BOYS MERCH"
               className="p-2.5 rounded-lg text-gray-400 hover:text-orange-400 hover:bg-orange-500/10 transition-colors"
-              title="Official Shopee Store @bdgnomercyy"
+              title="Official Shopee Store @dim4swelah"
             >
               <ShopeeIcon className="w-5 h-5 fill-current" />
             </a>
@@ -175,7 +175,7 @@ export const Navbar: React.FC = () => {
                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold shadow-lg shadow-orange-600/30 transition-colors"
               >
                 <ShopeeIcon className="w-5 h-5 fill-current" />
-                <span>Beli di Shopee Official (@bdgnomercyy)</span>
+                <span>Beli di Shopee Official (@dim4swelah)</span>
               </a>
 
               <a
@@ -195,7 +195,7 @@ export const Navbar: React.FC = () => {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-pink-400 transition-colors text-sm"
               >
                 <InstagramIcon className="w-4 h-4" />
-                <span>Follow Instagram @bdgboysmerch</span>
+                <span>Follow Instagram @bdgnomercyy</span>
               </a>
             </div>
           </div>
