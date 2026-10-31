@@ -62,80 +62,86 @@ export const AboutPage: React.FC = () => {
       </div>
 
       {/* Core Values */}
-      <div className="space-y-6">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-black text-white font-['Outfit']">
+      <div className="space-y-4 sm:space-y-6">
+        <div className="text-center max-w-2xl mx-auto space-y-1">
+          <h2 className="text-xl sm:text-3xl font-black text-white font-['Outfit']">
             Standar Produksi Kami
           </h2>
-          <p className="text-gray-400 text-xs sm:text-sm mt-1">
+          <p className="text-gray-400 text-xs sm:text-sm">
             Prinsip yang kami pegang dalam merilis setiap produk merchandise.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="p-6 rounded-xl bg-[#0d121f] border border-white/10 space-y-2.5">
-            <div className="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
-              <ShieldCheck className="w-5 h-5" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-5">
+          <div className="p-3.5 sm:p-5 rounded-xl bg-[#091222] border border-blue-950/80 flex items-start gap-3 sm:flex-col sm:gap-2.5">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/30 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
             </div>
-            <h3 className="text-base font-bold text-white font-['Outfit']">Material Asli Tanpa Campuran</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Katun Combed 24s reaktif, fleece tebal 330 GSM, dan kain Milano Dry-Fit yang tahan luntur dan nyaman saat dipakai beraktivitas.
-            </p>
+            <div className="space-y-1">
+              <h3 className="text-xs sm:text-base font-bold text-white font-['Outfit']">Material Asli Heavyweight</h3>
+              <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+                Katun Combed 20s & 24s gramasi tebal (190-210 GSM) dan sablon plastisol awet yang tidak mudah retak.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-[#0d121f] border border-white/10 space-y-2.5">
-            <div className="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
-              <Users className="w-5 h-5" />
+          <div className="p-3.5 sm:p-5 rounded-xl bg-[#091222] border border-blue-950/80 flex items-start gap-3 sm:flex-col sm:gap-2.5">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/30 flex items-center justify-center shrink-0">
+              <Users className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
             </div>
-            <h3 className="text-lg font-bold text-white font-['Outfit']">Identitas Komunitas</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Merchandise lahir dari kebutuhan nyata kawan-kawan di tribun dan jalanan yang menginginkan pakaian berkarakter tegas.
-            </p>
+            <div className="space-y-1">
+              <h3 className="text-xs sm:text-base font-bold text-white font-['Outfit']">Kultur Suporter & Streetwear</h3>
+              <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+                Desain orisinal lahir dari kecintaan nyata pada kultur tribun sepak bola dan streetwear khas Bandung.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-[#0d121f] border border-white/10 space-y-2.5">
-            <div className="w-10 h-10 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
-              <Award className="w-5 h-5" />
+          <div className="p-3.5 sm:p-5 rounded-xl bg-[#091222] border border-blue-950/80 flex items-start gap-3 sm:flex-col sm:gap-2.5">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0">
+              <Award className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
             </div>
-            <h3 className="text-lg font-bold text-white font-['Outfit']">Pelayanan WhatsApp Langsung</h3>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Komunikasi langsung dengan admin resmi. Pertanyaan seputar ukuran, ketersediaan, dan resi pengiriman dilayani tanpa perantara.
-            </p>
+            <div className="space-y-1">
+              <h3 className="text-xs sm:text-base font-bold text-white font-['Outfit']">Layanan WhatsApp & Shopee</h3>
+              <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
+                Konsultasi ukuran langsung via WhatsApp CS resmi atau transaksi praktis via Shopee Official Store.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Direct Contact Action */}
-      <div className="p-8 sm:p-10 rounded-2xl bg-[#0d121f] border border-white/10 text-center space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white font-['Outfit']">
+      <div className="p-6 sm:p-10 rounded-2xl bg-[#091222] border border-blue-950/80 text-center space-y-4">
+        <h2 className="text-xl sm:text-3xl font-black text-white font-['Outfit']">
           Ingin Menanyakan Stok atau Kunjungi Studio Kami?
         </h2>
         <p className="text-gray-300 text-xs sm:text-sm max-w-lg mx-auto">
           Hubungi admin kami di WhatsApp untuk menanyakan stok produk atau panduan memilih ukuran yang pas.
         </p>
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2.5">
           <Link
             to="/catalog"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold shadow-md transition-colors"
           >
             <span>Buka Katalog Produk</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
           <a
             href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS, saya ingin tanya informasi produk dan studio.')}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs sm:text-sm font-semibold border border-white/10 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold shadow-md transition-colors"
           >
-            Chat Admin WhatsApp
+            <span>Chat Admin WhatsApp</span>
           </a>
           <a
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-200 hover:text-pink-300 text-xs sm:text-sm font-semibold border border-white/10 transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-200 hover:text-pink-300 text-xs sm:text-sm font-semibold border border-white/10 transition-colors"
           >
-            <InstagramIcon className="w-4 h-4" />
+            <InstagramIcon className="w-3.5 h-3.5" />
             <span>@bdgnomercyy</span>
           </a>
         </div>
