@@ -231,13 +231,13 @@ export const HomePage: React.FC = () => {
             {/* Visual Lookbook Photo */}
             <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#131929] border border-white/10 relative">
               <img
-                src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=80"
-                alt="Streetwear Lookbook Bandung"
+                src="/bdg-merch-showcase.jpg"
+                alt="BDG BOYS MERCH Official Streetwear"
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm p-3 rounded-lg border border-white/10 text-xs">
-                <p className="font-bold text-white">Workshop & QC Bandung</p>
-                <p className="text-gray-400 text-[11px]">Setiap jahitan dan kerapian sablon diperiksa sebelum dipacking.</p>
+                <p className="font-bold text-white">Authentic Matchday & Streetwear</p>
+                <p className="text-gray-400 text-[11px]">Material katun heavyweight tebal berkarakter tegas khas Bandung pride.</p>
               </div>
             </div>
           </div>

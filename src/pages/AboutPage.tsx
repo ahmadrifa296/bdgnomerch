@@ -50,13 +50,13 @@ export const AboutPage: React.FC = () => {
 
         <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#131929] border border-white/10 relative">
           <img
-            src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80"
-            alt="Workshop BDG BOYS MERCH"
+            src="/bdg-merch-showcase.jpg"
+            alt="BDG BOYS MERCH Official Apparel"
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm p-3 rounded-lg border border-white/10 text-xs">
-            <p className="font-bold text-white">Workshop & Studio Bandung</p>
-            <p className="text-gray-400 text-[11px]">Dikerjakan bersama para penjahit garmen lokal Jawa Barat.</p>
+            <p className="font-bold text-white">Original BDG BOYS MERCH</p>
+            <p className="text-gray-400 text-[11px]">Kultur tribun dan streetwear jalanan dengan standar material premium.</p>
           </div>
         </div>
       </div>
