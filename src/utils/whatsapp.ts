@@ -13,7 +13,11 @@ export const getBrandName = (): string => {
 
 export const getWhatsAppNumber = (): string => {
   const rawNumber = import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_PHONE;
-  return rawNumber.replace(/[^0-9]/g, '');
+  let cleaned = rawNumber.replace(/[^0-9]/g, '');
+  if (cleaned.startsWith('0')) {
+    cleaned = '62' + cleaned.slice(1);
+  }
+  return cleaned;
 };
 
 export const getInstagramUrl = (): string => {
