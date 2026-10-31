@@ -174,9 +174,10 @@ File `vercel.json` pada root direktori telah dikonfigurasi untuk mendukung React
 4. **Environment Variables (Opsional):**
    Tambahkan variabel berikut di menu **Environment Variables** Vercel jika ingin mengubah nomor WA atau URL Instagram resmi:
    - `VITE_BRAND_NAME` = `BDG BOYS MERCH`
-   - `VITE_WHATSAPP_NUMBER` = `6281234567890`
-   - `VITE_INSTAGRAM_URL` = `https://instagram.com/bdgboysmerch`
-   - `VITE_STORE_LOCATION` = `Bandung, Jawa Barat, Indonesia`
+   - `VITE_WHATSAPP_NUMBER` = `6283854950915`
+   - `VITE_INSTAGRAM_URL` = `https://www.instagram.com/bdgnomercyy/`
+   - `VITE_SHOPEE_URL` = `https://shopee.co.id/dim4swelah`
+   - `VITE_STORE_LOCATION` = `Kota Jambi, Provinsi Jambi, Indonesia`
 
 5. **Klik "Deploy":**
    Vercel akan secara otomatis membangun aplikasi dalam waktu kurang dari 1 menit dan memberikan domain publik gratis (misalnya `https://bdgboysmerch.vercel.app/`). Setiap kali kamu melakukan `git push` ke branch `main`, Vercel akan otomatis melakukan auto-deploy update terbaru.

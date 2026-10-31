@@ -3,7 +3,7 @@
  * BDG BOYS MERCH
  */
 
-const DEFAULT_PHONE = '6281234567890';
+const DEFAULT_PHONE = '6283854950915';
 const DEFAULT_BRAND_NAME = 'BDG BOYS MERCH';
 const DEFAULT_INSTAGRAM = 'https://www.instagram.com/bdgnomercyy/';
 
@@ -12,7 +12,8 @@ export const getBrandName = (): string => {
 };
 
 export const getWhatsAppNumber = (): string => {
-  const rawNumber = import.meta.env.VITE_WHATSAPP_NUMBER || DEFAULT_PHONE;
+  const envPhone = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const rawNumber = (envPhone && !envPhone.includes('81234567890')) ? envPhone : DEFAULT_PHONE;
   let cleaned = rawNumber.replace(/[^0-9]/g, '');
   if (cleaned.startsWith('0')) {
     cleaned = '62' + cleaned.slice(1);
