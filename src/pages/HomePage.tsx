@@ -109,32 +109,51 @@ export const HomePage: React.FC = () => {
 
       {/* CATEGORIES GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div className="flex items-end justify-between gap-4 mb-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white font-['Outfit']">Kategori Artikel</h2>
-            <p className="text-xs sm:text-sm text-gray-400 mt-1">Pilih rilisan merchandise berdasarkan kategori artikel.</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white font-['Outfit']">Kategori Produk</h2>
+            <p className="text-xs sm:text-sm text-gray-400 mt-0.5">Pilih koleksi kaos atau official sticker pack.</p>
           </div>
-          <Link to="/catalog" className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-blue-400 hover:text-blue-300 font-semibold">
-            <span>Buka semua produk</span>
-            <ArrowRight className="w-4 h-4" />
+          <Link to="/catalog" className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-blue-400 hover:text-blue-300 font-semibold shrink-0">
+            <span>Buka Katalog</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 max-w-2xl">
           {[
-            { name: 'T-Shirt & Apparel', query: 'T-Shirt', desc: 'Cotton Combed 20s & 24s Heavyweight Boxy Fit' },
-            { name: 'Sticker Pack Official', query: 'Stiker', desc: 'Vinyl Die-Cut Waterproof & Anti Scratch "Ex Undis Sol"' },
+            { 
+              name: 'Kaos & T-Shirt', 
+              query: 'T-Shirt', 
+              desc: 'Combed 20s & 24s Heavy',
+              badge: 'Apparel',
+              badgeColor: 'bg-blue-600/20 text-blue-300 border-blue-500/30'
+            },
+            { 
+              name: 'Sticker Pack', 
+              query: 'Stiker', 
+              desc: 'Vinyl Die-Cut Waterproof',
+              badge: 'Aksesoris',
+              badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+            },
           ].map((cat) => (
             <Link
               key={cat.name}
               to={`/catalog?cat=${cat.query}`}
-              className="p-5 rounded-xl bg-[#0d121f] hover:bg-[#141b2d] border border-white/10 hover:border-blue-500/40 transition-colors block group"
+              className="p-3.5 sm:p-4 rounded-xl bg-[#091222] hover:bg-[#0e1930] border border-blue-950/80 hover:border-blue-500/40 transition-all duration-200 block group shadow-sm"
             >
-              <div className="flex items-center justify-between">
-                <h3 className="font-bold text-base text-white group-hover:text-blue-400 transition-colors mb-1">{cat.name}</h3>
+              <div className="flex items-center justify-between mb-2">
+                <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider border ${cat.badgeColor}`}>
+                  {cat.badge}
+                </span>
                 <span className="text-xs text-blue-400 group-hover:translate-x-1 transition-transform">→</span>
               </div>
-              <p className="text-xs text-gray-400">{cat.desc}</p>
+              <h3 className="font-bold text-sm sm:text-base text-white group-hover:text-blue-300 transition-colors leading-tight">
+                {cat.name}
+              </h3>
+              <p className="text-[11px] sm:text-xs text-gray-400 mt-1 line-clamp-1">
+                {cat.desc}
+              </p>
             </Link>
           ))}
         </div>
@@ -142,17 +161,17 @@ export const HomePage: React.FC = () => {
 
       {/* BEST SELLERS SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between gap-4 mb-6">
+        <div className="flex items-end justify-between gap-4 mb-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white font-['Outfit']">Artikel Paling Dicari</h2>
-            <p className="text-gray-400 text-xs sm:text-sm mt-1">Pilihan favorit suporter dan penikmat streetwear Bandung.</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white font-['Outfit']">Produk Paling Dicari</h2>
+            <p className="text-gray-400 text-xs sm:text-sm mt-0.5">Pilihan favorit suporter dan penikmat streetwear Bandung.</p>
           </div>
           <Link
             to="/catalog"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-blue-400 hover:text-blue-300 font-semibold"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-blue-400 hover:text-blue-300 font-semibold shrink-0"
           >
             <span>Semua Produk</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
