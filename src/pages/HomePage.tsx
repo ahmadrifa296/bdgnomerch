@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  MessageCircle, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Truck, 
-  Layers, 
+import {
+  ArrowRight,
+  MessageCircle,
+  CheckCircle2,
+  ShieldCheck,
+  Truck,
+  Layers,
   RotateCcw,
   ChevronDown,
   ChevronUp
@@ -41,12 +41,12 @@ export const HomePage: React.FC = () => {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.08] font-['Outfit']">
-              MERCHANDISE RESMI DARI KOTA BANDUNG.
+              MERCHANDISE RESMI DARI BDG BOYS MERCH.
             </h1>
 
             {/* Subtitle */}
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Kaos katun 24s heavyweight, hoodie fleece 330 GSM, jersey suporter, dan aksesoris khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi tanpa perlu registrasi akun.
+              Kaos katun 20s & 24s heavyweight serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
             </p>
 
             {/* CTAs */}
@@ -75,16 +75,16 @@ export const HomePage: React.FC = () => {
               <div className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Cotton 24s</h4>
-                  <p className="text-[11px] text-gray-400">Gramasi tebal 190-200 GSM</p>
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Cotton Heavy</h4>
+                  <p className="text-[11px] text-gray-400">Combed 20s & 24s tebal</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <Layers className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Sablon Plastisol</h4>
-                  <p className="text-[11px] text-gray-400">High-density doff curing</p>
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Sablon & Vinyl</h4>
+                  <p className="text-[11px] text-gray-400">Plastisol & Waterproof UV</p>
                 </div>
               </div>
 
@@ -100,7 +100,7 @@ export const HomePage: React.FC = () => {
                 <RotateCcw className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Tukar Ukuran</h4>
-                  <p className="text-[11px] text-gray-400">Garansi tukar size 2 hari</p>
+                  <p className="text-[11px] text-gray-400">Garansi tukar size kaos 2 hari</p>
                 </div>
               </div>
             </div>
@@ -113,7 +113,7 @@ export const HomePage: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white font-['Outfit']">Kategori Artikel</h2>
-            <p className="text-xs sm:text-sm text-gray-400 mt-1">Pilih rilisan merchandise berdasarkan kategori yang kamu butuhkan.</p>
+            <p className="text-xs sm:text-sm text-gray-400 mt-1">Pilih rilisan merchandise berdasarkan kategori artikel.</p>
           </div>
           <Link to="/catalog" className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-blue-400 hover:text-blue-300 font-semibold">
             <span>Buka semua produk</span>
@@ -121,21 +121,21 @@ export const HomePage: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
           {[
-            { name: 'T-Shirt 24s', query: 'T-Shirt', desc: 'Heavyweight Boxy Fit' },
-            { name: 'Hoodie & Fleece', query: 'Hoodie %26 Sweatshirt', desc: 'Taiwan Fleece 330 GSM' },
-            { name: 'Jersey Suporter', query: 'Jersey', desc: 'Sublimasi Milano Dry-Fit' },
-            { name: 'Headwear', query: 'Headwear', desc: 'Trucker Cap & Bucket Hat' },
-            { name: 'Syal & Aksesoris', query: 'Aksesoris', desc: 'Syal Rajut 14 Get & Tote' },
+            { name: 'T-Shirt & Apparel', query: 'T-Shirt', desc: 'Cotton Combed 20s & 24s Heavyweight Boxy Fit' },
+            { name: 'Sticker Pack Official', query: 'Stiker', desc: 'Vinyl Die-Cut Waterproof & Anti Scratch "Ex Undis Sol"' },
           ].map((cat) => (
             <Link
               key={cat.name}
               to={`/catalog?cat=${cat.query}`}
-              className="p-4 rounded-xl bg-[#0d121f] hover:bg-[#141b2d] border border-white/10 hover:border-blue-500/40 transition-colors block"
+              className="p-5 rounded-xl bg-[#0d121f] hover:bg-[#141b2d] border border-white/10 hover:border-blue-500/40 transition-colors block group"
             >
-              <h3 className="font-bold text-sm text-white mb-1">{cat.name}</h3>
-              <p className="text-[11px] text-gray-400">{cat.desc}</p>
+              <div className="flex items-center justify-between">
+                <h3 className="font-bold text-base text-white group-hover:text-blue-400 transition-colors mb-1">{cat.name}</h3>
+                <span className="text-xs text-blue-400 group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+              <p className="text-xs text-gray-400">{cat.desc}</p>
             </Link>
           ))}
         </div>
@@ -231,7 +231,7 @@ export const HomePage: React.FC = () => {
         <div className="flex items-end justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white font-['Outfit']">Rilisan Terbaru</h2>
-            <p className="text-gray-400 text-xs sm:text-sm mt-1">Syal rajut jacquard, jersey suporter, dan zip hoodie.</p>
+            <p className="text-gray-400 text-xs sm:text-sm mt-1">Kaos boxy heavyweight dan official sticker pack edisi terbaru.</p>
           </div>
           <Link
             to="/catalog"

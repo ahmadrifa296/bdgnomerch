@@ -1,4 +1,4 @@
-export type ProductCategory = 'Semua' | 'T-Shirt' | 'Hoodie & Sweatshirt' | 'Jersey' | 'Headwear' | 'Aksesoris';
+export type ProductCategory = 'Semua' | 'T-Shirt' | 'Stiker';
 
 export interface Product {
   id: string;

@@ -187,15 +187,17 @@ export const ProductDetailPage: React.FC = () => {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">
-                Pilih Ukuran:
+                {product.category === 'Stiker' ? 'Pilihan Paket:' : 'Pilih Ukuran:'}
               </span>
-              <button
-                onClick={() => setIsSizeChartOpen(true)}
-                className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                <Ruler className="w-3.5 h-3.5" />
-                <span>Panduan Ukuran (Size Chart)</span>
-              </button>
+              {product.category !== 'Stiker' && (
+                <button
+                  onClick={() => setIsSizeChartOpen(true)}
+                  className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  <Ruler className="w-3.5 h-3.5" />
+                  <span>Panduan Ukuran (Size Chart)</span>
+                </button>
+              )}
             </div>
 
             <div className="flex items-center gap-2.5 flex-wrap">

@@ -119,23 +119,18 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/catalog?cat=Hoodie%20%26%20Sweatshirt" className="hover:text-blue-400 transition-colors">
-                  Oversized Fleece Hoodie
+                <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
+                  Boxy Heavyweight Tee 20s
                 </Link>
               </li>
               <li>
-                <Link to="/catalog?cat=Jersey" className="hover:text-blue-400 transition-colors">
-                  Matchday Supporter Jersey
+                <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
+                  Terrace Casuals Graphic Tee
                 </Link>
               </li>
               <li>
-                <Link to="/catalog?cat=Headwear" className="hover:text-blue-400 transition-colors">
-                  Reversible Bucket Hat & Caps
-                </Link>
-              </li>
-              <li>
-                <Link to="/catalog?cat=Aksesoris" className="hover:text-blue-400 transition-colors">
-                  Jacquard Scarf & Tote Bag
+                <Link to="/catalog?cat=Stiker" className="hover:text-blue-400 transition-colors">
+                  10 Pcs Sticker Pack "Ex Undis Sol"
                 </Link>
               </li>
             </ul>

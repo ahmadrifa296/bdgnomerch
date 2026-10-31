@@ -38,12 +38,12 @@ export const AboutPage: React.FC = () => {
 
           <div className="pt-2 grid grid-cols-2 gap-3 text-white">
             <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
-              <span className="block text-xl font-bold text-blue-400 font-mono">Cotton 24s</span>
-              <span className="text-xs text-gray-400">Gramasi tebal 190-200 GSM</span>
+              <span className="block text-xl font-bold text-blue-400 font-mono">Cotton 20s & 24s</span>
+              <span className="text-xs text-gray-400">Gramasi tebal 190-210 GSM</span>
             </div>
             <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
-              <span className="block text-xl font-bold text-amber-400 font-mono">Fleece 330</span>
-              <span className="text-xs text-gray-400">Gramasi hoodie hangat Taiwan</span>
+              <span className="block text-xl font-bold text-amber-400 font-mono">Vinyl Die-Cut</span>
+              <span className="text-xs text-gray-400">Laminasi doff tahan cuaca & air</span>
             </div>
           </div>
         </div>
