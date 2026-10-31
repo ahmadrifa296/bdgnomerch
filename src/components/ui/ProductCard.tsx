@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Truck, MapPin, Star, Ticket } from 'lucide-react';
+import { MessageCircle, Truck, MapPin, Star } from 'lucide-react';
 import { ShopeeIcon } from './Icons';
 import type { Product } from '../../types';
 import { createWhatsAppOrderUrl } from '../../utils/whatsapp';
@@ -94,18 +94,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 Rp{formattedOriginalPrice}
               </span>
             )}
-
-            <Ticket className="w-3.5 h-3.5 text-[#ee4d2d] shrink-0" />
-          </div>
-
-          {/* Shopee Voucher / Promo Badges */}
-          <div className="flex items-center gap-1 mt-1 flex-wrap">
-            <span className="px-1 py-0.2 rounded border border-[#ee4d2d]/60 bg-[#ee4d2d]/10 text-[#ee4d2d] text-[9px] font-bold tracking-tight">
-              KOMISI <span className="font-black">XTRA</span>
-            </span>
-            <span className="px-1 py-0.2 rounded border border-amber-500/60 bg-amber-500/10 text-amber-400 text-[9px] font-bold tracking-tight">
-              GRATIS ONGKIR
-            </span>
           </div>
 
           {/* Rating & Sold Indicator */}
