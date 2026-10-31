@@ -29,6 +29,32 @@ export const PRODUCTS: Product[] = [
     shopeeUrl: 'https://shopee.co.id/dim4swelah'
   },
   {
+    id: 'bdg-002',
+    name: 'T-Shirt EX UNDIS SOL',
+    slug: 't-shirt-ex-undis-sol',
+    price: 110000,
+    originalPrice: 135000,
+    category: 'T-Shirt',
+    image: '/products/t-shirt-ex-undis-sol.jpg',
+    tags: ['Ex Undis Sol', 'New Release', 'Bandung Pride'],
+    isBestSeller: true,
+    isNewRelease: true,
+    description: 'T-Shirt official BDG BOYS MERCH edisi "EX UNDIS SOL" warna putih dengan artwork heraldik lambang kebanggaan kota Bandung. Dibuat menggunakan bahan katun combed 24s dengan sablon plastisol berkualitas tinggi dan potongan pola regular fit.',
+    material: 'Cotton Combed 24s',
+    printType: 'Plastisol',
+    cutting: 'Regular Fit',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    inStock: true,
+    stockCount: 35,
+    features: [
+      'Bahan: Cotton Combed 24s (adem, halus, menyerap keringat)',
+      'Sablon: Plastisol awet, tajam, dan tidak mudah retak',
+      'Cutting: Regular Fit nyaman untuk matchday dan harian',
+      'Artwork grafis heraldik singa "Ex Undis Sol" khas Bandung pride',
+      'Jahitan rantai pundak rapi dan standar distro berkualitas'
+    ]
+  },
+  {
     id: 'bdg-010',
     name: '10 Pcs Sticker Pack "Ex Undis Sol"',
     slug: '10-pcs-sticker-pack-ex-undis-sol',
@@ -77,32 +103,6 @@ export const PRODUCTS: Product[] = [
       'Rib kerah tebal 2.5cm anti melar',
       'Bonus sticker pack resmi BDG BOYS'
     ]
-  },
-  {
-    id: 'bdg-002',
-    name: 'BDG Boxy Heavyweight Tee 20s "Ex Undis Sol" Black',
-    slug: 'bdg-boxy-heavyweight-tee-ex-undis-sol-black',
-    price: 175000,
-    originalPrice: 210000,
-    category: 'T-Shirt',
-    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
-    tags: ['Ex Undis Sol', 'Boxy Fit', 'Cotton 20s'],
-    isBestSeller: true,
-    isNewRelease: true,
-    description: 'T-Shirt oversized boxy-fit dengan tipografi khas "Ex Undis Sol" dan grafis heraldik singa Bandung. Menggunakan material katun combed 20s heavy (210 GSM) dengan tekstur kokoh jatuh sempurna di badan.',
-    material: '100% Cotton Combed 20s Heavyweight (210 GSM)',
-    printType: 'Discharge & Plastisol Vintage Texture',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    inStock: true,
-    stockCount: 24,
-    features: [
-      'Potongan boxy cut streetwear drop shoulder',
-      'Bahan combed 20s heavy yang kokoh dan tidak mudah susut',
-      'Sablon discharge menyatu dengan serat kain',
-      'Official woven label BDG BOYS MERCH di sisi bawah'
-    ],
-    shopeeUrl: 'https://shopee.co.id/dim4swelah'
   },
   {
     id: 'bdg-003',
