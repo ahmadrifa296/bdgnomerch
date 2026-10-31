@@ -10,8 +10,6 @@ export interface Product {
   image: string;
   secondaryImage?: string;
   tags: string[];
-  rating: number;
-  reviewsCount: number;
   isBestSeller?: boolean;
   isNewRelease?: boolean;
   description: string;
@@ -21,17 +19,6 @@ export interface Product {
   inStock: boolean;
   stockCount: number;
   features: string[];
-}
-
-export interface Review {
-  id: string;
-  customerName: string;
-  avatar: string;
-  rating: number;
-  comment: string;
-  date: string;
-  productPurchased: string;
-  city: string;
 }
 
 export interface FaqItem {

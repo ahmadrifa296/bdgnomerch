@@ -61,8 +61,8 @@ export const CatalogPage: React.FC = () => {
       if (sortBy === 'price-asc') return a.price - b.price;
       if (sortBy === 'price-desc') return b.price - a.price;
       if (sortBy === 'newest') return (b.isNewRelease ? 1 : 0) - (a.isNewRelease ? 1 : 0);
-      // Popular (rating & reviews)
-      return b.rating * b.reviewsCount - a.rating * a.reviewsCount;
+      // Popular (Best Seller)
+      return (b.isBestSeller ? 1 : 0) - (a.isBestSeller ? 1 : 0);
     });
   }, [selectedCategory, searchQuery, sortBy, onlyInStock]);
 

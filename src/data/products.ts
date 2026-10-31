@@ -1,4 +1,4 @@
-import type { Product, Review, FaqItem } from '../types';
+import type { Product, FaqItem } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
@@ -11,8 +11,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
     secondaryImage: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
     tags: ['Best Seller', 'Heavyweight', 'Bandung Culture'],
-    rating: 4.9,
-    reviewsCount: 142,
     isBestSeller: true,
     isNewRelease: false,
     description: 'T-Shirt edisi kebanggaan BDG BOYS MERCH dengan bahan Cotton Combed 24s Heavyweight reaktif. Potongan boxy-fit modern dengan sablon Plastisol High Density tahan cuci berkali-kali.',
@@ -25,7 +23,7 @@ export const PRODUCTS: Product[] = [
       'Bahan tebal tidak menerawang dan sangat adem',
       'Jahitan rantai standar distro Bandung',
       'Rib kerah tebal 2.5cm anti melar',
-      'Free stiker pack eksklusif BDG BOYS'
+      'Bonus sticker pack resmi BDG BOYS'
     ]
   },
   {
@@ -38,8 +36,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
     secondaryImage: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80',
     tags: ['Edisi Terbatas', 'Cotton Fleece', 'Warm & Soft'],
-    rating: 5.0,
-    reviewsCount: 98,
     isBestSeller: true,
     isNewRelease: false,
     description: 'Hoodie premium dengan bahan Cotton Fleece Taiwan 330 GSM yang lembut dan tebal. Desain grafis tipografi vintage Paris Van Java di bagian punggung dan bordir emblem BDG di dada kiri.',
@@ -65,8 +61,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://images.unsplash.com/photo-1577210897949-1f56f9435024?auto=format&fit=crop&w=800&q=80',
     secondaryImage: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80',
     tags: ['New Release', 'Sublimation', 'Matchday Ready'],
-    rating: 4.8,
-    reviewsCount: 76,
     isBestSeller: false,
     isNewRelease: true,
     description: 'Jersey suporter resmi bernuansa biru kebanggaan dengan aksen strip emas dan pola jacquard khas kota kembang. Teknologi Dry-Fit Breathable menjamin kenyamanan saat di tribun maupun hangout.',
@@ -92,8 +86,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80',
     secondaryImage: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80',
     tags: ['Zip Hoodie', 'YKK Metal', 'Heavyweight'],
-    rating: 4.9,
-    reviewsCount: 64,
     isBestSeller: false,
     isNewRelease: true,
     description: 'Zip hoodie serbaguna dengan zipper YKK metal original. Terinspirasi dari gemerlap arsitektur jembatan Pasupati di malam hari. Dilengkapi saku dalam tambahan untuk gadget.',
@@ -118,8 +110,6 @@ export const PRODUCTS: Product[] = [
     category: 'T-Shirt',
     image: 'https://images.unsplash.com/photo-1625910513413-7d2d38ec9d41?auto=format&fit=crop&w=800&q=80',
     tags: ['Casuals', 'Terrace Culture', 'Pique Cotton'],
-    rating: 4.7,
-    reviewsCount: 53,
     isBestSeller: false,
     isNewRelease: false,
     description: 'Polo shirt berkarakter casuals khas football culture Eropa yang diadaptasi untuk anak muda Bandung. Bahan Lacoste Pique Cotton sejuk dengan bordir presisi.',
@@ -144,8 +134,6 @@ export const PRODUCTS: Product[] = [
     category: 'Headwear',
     image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80',
     tags: ['Caps', 'Snapback', 'Embroidered'],
-    rating: 4.9,
-    reviewsCount: 112,
     isBestSeller: true,
     isNewRelease: false,
     description: 'Trucker cap vintage dengan busa depan tebal dan jaring breathable di bagian belakang. Patch bordir 3D "BDG 1923" bergaya retro street.',
@@ -170,8 +158,6 @@ export const PRODUCTS: Product[] = [
     category: 'Headwear',
     image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=800&q=80',
     tags: ['Reversible', 'Outdoor', 'Festival Ready'],
-    rating: 4.8,
-    reviewsCount: 47,
     isBestSeller: false,
     isNewRelease: true,
     description: 'Bucket hat inovatif yang bisa dibolak-balik (2 in 1). Sisi luar hitam pekat dengan woven label BDG, sisi dalam motif tartan casuals legendaris.',
@@ -196,8 +182,6 @@ export const PRODUCTS: Product[] = [
     category: 'Aksesoris',
     image: 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=800&q=80',
     tags: ['Football Scarf', 'Tribun Culture', '14 Get'],
-    rating: 5.0,
-    reviewsCount: 89,
     isBestSeller: true,
     isNewRelease: false,
     description: 'Syal rajut jacquard 14 get berkualitas Eropa dengan rumbai tebal di kedua ujung. Desain "BANDUNG TILL I DIE" dengan warna ikonik biru, putih, dan strip emas.',
@@ -222,8 +206,6 @@ export const PRODUCTS: Product[] = [
     category: 'Aksesoris',
     image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
     tags: ['Corduroy', 'Campus Ready', 'Free Keychain'],
-    rating: 4.8,
-    reviewsCount: 61,
     isBestSeller: false,
     isNewRelease: true,
     description: 'Tote bag fungsional berbahan corduroy 8-wale premium. Muat laptop hingga 15 inci, dilengkapi ritsleting utama dan saku kancing dalam.',
@@ -250,68 +232,25 @@ export const CATEGORIES = [
   'Aksesoris'
 ] as const;
 
-export const REVIEWS: Review[] = [
-  {
-    id: 'rev-1',
-    customerName: 'Rian Pratama',
-    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    comment: 'Bahan kaos 24s heavyweight-nya gokil, tebal tapi tetep adem dipakai keliling Bandung pas siang. Sablon plastisolnya rapi banget gak pecah sama sekali pas dicuci. Langsung order lagi!',
-    date: '3 hari yang lalu',
-    productPurchased: 'BDG Ultra Heavyweight Tee 24s "Bandung Pride"',
-    city: 'Bandung Kulon'
-  },
-  {
-    id: 'rev-2',
-    customerName: 'Dimas Anggara',
-    avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    comment: 'Admin fast respon via WhatsApp, proses dari transfer sampai resi SiCepat keluar cuma 2 jam. Hoodie Paris Van Java beneran tebel 330 gsm, pas banget buat nongkrong di Dago Atas.',
-    date: '1 minggu yang lalu',
-    productPurchased: 'Paris Van Java Heritage Oversized Hoodie',
-    city: 'Jakarta Selatan'
-  },
-  {
-    id: 'rev-3',
-    customerName: 'Fajar Nugraha',
-    avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    comment: 'Jersey suporter terbaik yang pernah gua punya. Detail silikon 3D di dadanya mewah parah. Dipake nobar tribun nyaman banget anti gerah.',
-    date: '2 minggu yang lalu',
-    productPurchased: 'Bandung Boys Matchday Supporter Jersey 2026',
-    city: 'Cimahi'
-  },
-  {
-    id: 'rev-4',
-    customerName: 'Gilang Ramadhan',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    comment: 'Syal rajut 14 get-nya mantap, rumbainya tebal dan gak gatal di leher. Pengiriman ke Surabaya cuma 2 hari. Recommended merchandise!',
-    date: '3 minggu yang lalu',
-    productPurchased: 'Bandung Pride Jacquard Football Scarf',
-    city: 'Surabaya'
-  }
-];
-
 export const FAQS: FaqItem[] = [
   {
-    question: 'Bagaimana cara memesan merchandise di BDG BOYS MERCH?',
-    answer: 'Cukup pilih produk yang kamu suka, klik tombol "Order via WhatsApp" atau "Pesan Sekarang". Kamu akan langsung dialihkan ke WhatsApp resmi admin kami dengan format pesanan yang sudah terisi otomatis.'
+    question: 'Bagaimana alur pemesanan merchandise via WhatsApp?',
+    answer: 'Pilih produk dan ukuran di katalog, lalu klik tombol Order via WhatsApp. Pesan otomatis tersusun rapi dengan nama artikel, ukuran, dan jumlah. Admin kami akan langsung merespons dengan ketersediaan stok, ongkos kirim, dan nomor rekening resmi.'
   },
   {
-    question: 'Apakah produk dijamin ready stock?',
-    answer: 'Mayoritas produk yang tertera di website ready stock di warehouse kami di Bandung. Jika ada item pre-order atau stok terbatas, admin akan langsung mengonfirmasi saat kamu chat WhatsApp.'
+    question: 'Apakah produk di website ini ready stock?',
+    answer: 'Semua artikel yang berstatus Ready Stock siap dikirim langsung dari studio workshop kami di Bandung. Jika ukuran habis, tombol pemesanan akan menginfokan status pre-order atau restock berikutnya.'
   },
   {
-    question: 'Metode pembayaran apa saja yang diterima?',
-    answer: 'Kami menerima transfer bank resmi (BCA, Mandiri, BRI, BNI), QRIS (GoPay, OVO, Dana, ShopeePay), dan COD khusus area Kota Bandung dengan perjanjian terlebih dahulu.'
+    question: 'Metode pembayaran dan rekening resmi apa saja yang didukung?',
+    answer: 'Pembayaran transfer bank resmi (BCA, Mandiri, BRI, BNI) dan QRIS resmi untuk semua e-wallet (GoPay, OVO, Dana, ShopeePay). Kami tidak pernah menggunakan rekening perorangan yang tidak terdaftar atas nama official store.'
   },
   {
     question: 'Berapa lama estimasi pengiriman pesanan?',
-    answer: 'Pesanan yang lunas sebelum pukul 16.00 WIB akan dikirim di hari yang sama melalui JNE, J&T, SiCepat, atau kurir instan Gosend/Grab (area Bandung Raya). Estimasi reguler Jawa Barat & Jabodetabek 1-2 hari kerja.'
+    answer: 'Pesanan terverifikasi sebelum jam 16.00 WIB dikirim pada hari yang sama. Pengiriman menggunakan ekspedisi resmi (JNE, J&T, SiCepat) dengan estimasi Jawa Barat 1 hari kerja, Pulau Jawa 1-2 hari kerja, dan luar Jawa 2-4 hari kerja.'
   },
   {
-    question: 'Apakah bisa tukar size jika kekecilan atau kebesaran?',
-    answer: 'Bisa! Kami memberikan garansi tukar size maksimal 2 hari setelah barang diterima, dengan syarat tag label masih utuh, baju belum dicuci, dan kondisi barang masih 100% mulus.'
+    question: 'Apakah ada jaminan tukar ukuran jika tidak pas?',
+    answer: 'Kami melayani penukaran ukuran maksimal 2 hari setelah paket diterima. Syaratnya kondisi baju belum dicuci, hangtag label masih terpasang utuh, dan stok ukuran pengganti tersedia.'
   }
 ];

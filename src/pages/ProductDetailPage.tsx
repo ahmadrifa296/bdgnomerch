@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ChevronRight, 
-  Star, 
   MessageCircle, 
   Ruler, 
   ShieldCheck, 
@@ -156,18 +155,13 @@ export const ProductDetailPage: React.FC = () => {
               {product.name}
             </h1>
 
-            {/* Rating & Review */}
-            <div className="flex items-center gap-3 mt-3 text-sm">
-              <div className="flex items-center gap-1 text-amber-400 font-bold">
-                <Star className="w-4 h-4 fill-current" />
-                <span>{product.rating.toFixed(1)}</span>
-              </div>
-              <span className="text-gray-500">•</span>
-              <span className="text-gray-400">{product.reviewsCount} Ulasan Pelanggan</span>
-              <span className="text-gray-500">•</span>
-              <span className="inline-flex items-center gap-1 text-emerald-400 font-medium text-xs">
+            {/* Stock & Origin Status */}
+            <div className="flex items-center gap-3 mt-3 text-xs text-gray-300">
+              <span className="inline-flex items-center gap-1 text-emerald-400 font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5" /> Ready Stock ({product.stockCount} pcs)
               </span>
+              <span className="text-gray-600">•</span>
+              <span className="text-gray-400 font-mono">Original Distro Bandung</span>
             </div>
           </div>
 
