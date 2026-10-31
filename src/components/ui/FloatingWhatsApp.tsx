@@ -19,14 +19,16 @@ export const FloatingWhatsApp: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Pop-up Card */}
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 bg-[#0c1220] rounded-2xl border border-white/10 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
+        <div className="mb-3 w-80 sm:w-96 bg-[#0d172a] rounded-2xl border border-blue-900/40 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
           {/* Header */}
           <div className="bg-gradient-to-r from-emerald-600 to-green-600 p-4 text-white flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm">
-                  BDG
-                </div>
+                <img
+                  src="/logo.jpg"
+                  alt="BDG BOYS MERCH"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white/30 shadow-sm"
+                />
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-emerald-700 rounded-full animate-pulse"></span>
               </div>
               <div>
@@ -47,10 +49,10 @@ export const FloatingWhatsApp: React.FC = () => {
           </div>
 
           {/* Body Message */}
-          <div className="p-4 space-y-3 bg-[#090d16]/90">
-            <div className="bg-[#141b2d] p-3 rounded-xl border border-white/5 text-xs text-gray-300 leading-relaxed">
+          <div className="p-4 space-y-3 bg-[#091222]">
+            <div className="bg-[#0e1930] p-3 rounded-xl border border-blue-900/30 text-xs text-slate-200 leading-relaxed">
               <p className="font-semibold text-white mb-1">Sampurasun! 🙏</p>
-              Ada yang bisa kami bantu seputar size, stok merchandise, atau pengiriman hari ini?
+              Ada yang bisa kami bantu seputar ukuran, stok artikel, atau pengiriman hari ini?
             </div>
 
             <form onSubmit={handleSend} className="space-y-2">

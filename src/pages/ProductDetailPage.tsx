@@ -286,7 +286,7 @@ export const ProductDetailPage: React.FC = () => {
               {product.description}
             </p>
 
-            <div className="p-4 rounded-xl bg-[#0c1220] border border-white/5 space-y-2 text-xs">
+            <div className="p-4 rounded-xl bg-[#0d172a] border border-blue-900/30 space-y-2 text-xs">
               <div className="flex justify-between py-1 border-b border-white/5">
                 <span className="text-gray-400">Material Bahan:</span>
                 <span className="text-white font-medium">{product.material}</span>

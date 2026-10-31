@@ -38,26 +38,24 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#090d16]/95 backdrop-blur-md shadow-xl border-b border-white/10 py-3'
-          : 'bg-[#090d16]/70 backdrop-blur-sm border-b border-white/5 py-4'
+          ? 'bg-[#091222]/95 backdrop-blur-md shadow-xl border-b border-blue-900/30 py-3'
+          : 'bg-[#091222]/80 backdrop-blur-sm border-b border-blue-900/20 py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-blue-600 to-amber-500 p-[2px] transition-transform duration-300 group-hover:scale-105 shadow-lg shadow-blue-600/30">
-              <div className="w-full h-full bg-[#0b0f19] rounded-[10px] flex items-center justify-center">
-                <span className="font-extrabold text-sm tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-300 font-mono">
-                  BDG
-                </span>
-              </div>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group focus:outline-none">
+            <img
+              src="/logo.jpg"
+              alt="BDG BOYS MERCH Official Logo"
+              className="w-10 h-10 rounded-full object-cover border-2 border-blue-400/40 shadow-md group-hover:scale-105 transition-transform duration-200"
+            />
             <div className="flex flex-col">
-              <span className="font-black tracking-tight text-lg sm:text-xl text-white group-hover:text-blue-400 transition-colors uppercase font-['Outfit']">
+              <span className="font-black tracking-tight text-lg sm:text-xl text-white group-hover:text-blue-300 transition-colors uppercase font-['Outfit']">
                 {brandName}
               </span>
-              <span className="text-[10px] tracking-widest text-gray-400 uppercase -mt-1 font-semibold flex items-center gap-1">
+              <span className="text-[10px] tracking-widest text-blue-300/80 uppercase -mt-1 font-semibold flex items-center gap-1 font-mono">
                 Bandung Pride <ShieldCheck className="w-3 h-3 text-blue-400 inline" />
               </span>
             </div>

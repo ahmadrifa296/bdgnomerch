@@ -30,7 +30,16 @@ export const HomePage: React.FC = () => {
       <section className="pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            {/* Main Headline without generic eyebrow pill */}
+            {/* Authentic Brand Badge */}
+            <div className="flex justify-center">
+              <img
+                src="/logo.jpg"
+                alt="BDG BOYS MERCH Official Badge"
+                className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Main Headline */}
             <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.08] font-['Outfit']">
               MERCHANDISE RESMI DARI KOTA BANDUNG.
             </h1>

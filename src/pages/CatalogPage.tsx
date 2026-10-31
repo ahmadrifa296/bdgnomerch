@@ -90,7 +90,7 @@ export const CatalogPage: React.FC = () => {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="p-4 sm:p-6 rounded-2xl bg-[#0c1220] border border-white/10 space-y-4">
+      <div className="p-4 sm:p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-4">
         {/* Search & Sort Controls */}
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           {/* Search Input */}
@@ -182,7 +182,7 @@ export const CatalogPage: React.FC = () => {
         </div>
       ) : (
         /* Empty State */
-        <div className="text-center py-20 px-4 rounded-3xl bg-[#0c1220] border border-white/10 space-y-4">
+        <div className="text-center py-20 px-4 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-4">
           <div className="w-16 h-16 mx-auto rounded-2xl bg-white/5 flex items-center justify-center text-gray-500">
             <PackageX className="w-8 h-8" />
           </div>

@@ -10,19 +10,17 @@ export const Footer: React.FC = () => {
   const whatsappNumber = getWhatsAppNumber();
 
   return (
-    <footer className="bg-[#060910] border-t border-white/10 pt-16 pb-12 text-gray-400">
+    <footer className="bg-[#060e1c] border-t border-blue-900/30 pt-16 pb-12 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-700 via-blue-600 to-amber-500 p-[2px]">
-                <div className="w-full h-full bg-[#0b0f19] rounded-[10px] flex items-center justify-center">
-                  <span className="font-extrabold text-xs text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-300 font-mono">
-                    BDG
-                  </span>
-                </div>
-              </div>
+              <img
+                src="/logo.jpg"
+                alt="BDG BOYS MERCH Official Logo"
+                className="w-11 h-11 rounded-full object-cover border-2 border-blue-400/40 shadow-md"
+              />
               <span className="font-black text-xl text-white tracking-tight font-['Outfit']">
                 {brandName}
               </span>

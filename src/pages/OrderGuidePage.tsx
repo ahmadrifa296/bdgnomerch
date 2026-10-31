@@ -86,7 +86,7 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
           return (
             <div
               key={s.step}
-              className="p-6 rounded-2xl bg-[#0c1220] border border-white/10 relative overflow-hidden flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 relative overflow-hidden flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -104,7 +104,7 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
       </div>
 
       {/* Copyable WhatsApp Order Format */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-[#0c1220] border border-white/10 space-y-6">
+      <div className="p-6 sm:p-8 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="text-xl sm:text-2xl font-black text-white font-['Outfit']">
@@ -134,7 +134,7 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
         </div>
 
         {/* Code Block Display */}
-        <div className="p-4 rounded-2xl bg-[#080c14] border border-white/5 font-mono text-xs text-blue-300 leading-relaxed whitespace-pre-wrap select-all">
+        <div className="p-4 rounded-xl bg-[#070e1b] border border-blue-900/40 font-mono text-xs text-blue-300 leading-relaxed whitespace-pre-wrap select-all">
           {templateFormat}
         </div>
 
@@ -157,8 +157,8 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
       </div>
 
       {/* Payment & Shipping Logos Info */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-6 rounded-2xl bg-[#0c1220] border border-white/10 space-y-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-3">
           <h3 className="font-bold text-base text-white font-['Outfit'] flex items-center gap-2">
             <CreditCard className="w-5 h-5 text-blue-400" />
             Metode Pembayaran
@@ -174,7 +174,7 @@ Mohon info total biaya dan nomor rekening ya. Hatur nuhun!`;
           </div>
         </div>
 
-        <div className="p-6 rounded-2xl bg-[#0c1220] border border-white/10 space-y-3">
+        <div className="p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-3">
           <h3 className="font-bold text-base text-white font-['Outfit'] flex items-center gap-2">
             <Truck className="w-5 h-5 text-emerald-400" />
             Jasa Ekspedisi Pengiriman
