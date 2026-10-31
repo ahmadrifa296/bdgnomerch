@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, MessageCircle, ShieldCheck } from 'lucide-react';
-import { InstagramIcon } from '../ui/Icons';
-import { getWhatsAppGeneralUrl, getBrandName, getInstagramUrl } from '../../utils/whatsapp';
+import { InstagramIcon, ShopeeIcon } from '../ui/Icons';
+import { getWhatsAppGeneralUrl, getBrandName, getInstagramUrl, getShopeeStoreUrl } from '../../utils/whatsapp';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,6 +83,17 @@ export const Navbar: React.FC = () => {
           {/* Right Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
+              href={getShopeeStoreUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shopee Official BDG BOYS MERCH"
+              className="p-2.5 rounded-lg text-gray-400 hover:text-orange-400 hover:bg-orange-500/10 transition-colors"
+              title="Official Shopee Store @bdgnomercyy"
+            >
+              <ShopeeIcon className="w-5 h-5 fill-current" />
+            </a>
+
+            <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -105,6 +116,16 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Hamburger Button */}
           <div className="flex md:hidden items-center gap-2">
+            <a
+              href={getShopeeStoreUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-orange-600/20 text-orange-400 border border-orange-500/30"
+              aria-label="Shopee Store"
+              title="Shopee Official"
+            >
+              <ShopeeIcon className="w-5 h-5 fill-current" />
+            </a>
             <a
               href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH!')}
               target="_blank"
@@ -147,6 +168,16 @@ export const Navbar: React.FC = () => {
             ))}
 
             <div className="pt-4 mt-2 border-t border-white/10 flex flex-col gap-3">
+              <a
+                href={getShopeeStoreUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold shadow-lg shadow-orange-600/30 transition-colors"
+              >
+                <ShopeeIcon className="w-5 h-5 fill-current" />
+                <span>Beli di Shopee Official (@bdgnomercyy)</span>
+              </a>
+
               <a
                 href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya ingin konsultasi produk.')}
                 target="_blank"

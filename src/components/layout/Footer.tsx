@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, MapPin, Clock, Phone, Heart } from 'lucide-react';
-import { InstagramIcon } from '../ui/Icons';
-import { getWhatsAppGeneralUrl, getBrandName, getInstagramUrl, getWhatsAppNumber } from '../../utils/whatsapp';
+import { InstagramIcon, ShopeeIcon } from '../ui/Icons';
+import { getWhatsAppGeneralUrl, getBrandName, getInstagramUrl, getWhatsAppNumber, getShopeeStoreUrl } from '../../utils/whatsapp';
 
 export const Footer: React.FC = () => {
   const brandName = getBrandName();
@@ -31,6 +31,16 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="flex items-center gap-3 pt-2">
+              <a
+                href={getShopeeStoreUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-xl bg-white/5 hover:bg-orange-500/20 hover:text-orange-400 border border-white/10 flex items-center justify-center transition-all duration-200"
+                aria-label="Shopee Official Store"
+                title="Official Shopee Store @bdgnomercyy"
+              >
+                <ShopeeIcon className="w-5 h-5 fill-current" />
+              </a>
               <a
                 href={instagramUrl}
                 target="_blank"
@@ -82,6 +92,17 @@ export const Footer: React.FC = () => {
                 <Link to="/contact" className="hover:text-blue-400 transition-colors flex items-center gap-1.5">
                   <span>Kontak & Lokasi</span>
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={getShopeeStoreUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-400 text-orange-400/90 transition-colors flex items-center gap-1.5 font-medium"
+                >
+                  <ShopeeIcon className="w-3.5 h-3.5 fill-current text-orange-400" />
+                  <span>Shopee @bdgnomercyy</span>
+                </a>
               </li>
             </ul>
           </div>

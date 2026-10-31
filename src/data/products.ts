@@ -2,6 +2,31 @@ import type { Product, FaqItem } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'bdg-010',
+    name: '10 Pcs Sticker Pack "Ex Undis Sol"',
+    slug: '10-pcs-sticker-pack-ex-undis-sol',
+    price: 30000,
+    originalPrice: 40000,
+    category: 'Aksesoris',
+    image: '/products/sticker-pack.png',
+    tags: ['Official Sticker', 'Vinyl Waterproof', 'Ex Undis Sol'],
+    isBestSeller: true,
+    isNewRelease: true,
+    description: 'Official 10 Pcs Sticker Pack edisi "Ex Undis Sol" dari BDG BOYS MERCH (@bdgnomercyy). Berisi 10 buah stiker die-cut vinyl berkualitas tinggi dengan lapisan laminasi doff anti-air dan anti-sinar UV. Cocok ditempel di helm, motor, laptop, koper, dan perlengkapan matchday.',
+    material: 'Vinyl Premium Die-Cut + Doff Lamination (Waterproof & Scratch-Resistant)',
+    printType: 'High Quality UV Print Die-Cut Contour',
+    sizes: ['1 Pack (10 Pcs)'],
+    inStock: true,
+    stockCount: 50,
+    features: [
+      'Isi 10 pcs stiker vinyl die-cut desain kultus Bandung Boys',
+      'Material vinyl tebal tahan air hujan, cuaca panas, dan goresan',
+      'Laminasi doff premium tidak mudah pudar atau sobek',
+      'Dikemas rapi dalam zip-lock pouch hitam eksklusif Ex Undis Sol'
+    ],
+    shopeeUrl: 'https://shopee.co.id/bdgnomercyy'
+  },
+  {
     id: 'bdg-001',
     name: 'BDG Ultra Heavyweight Tee 24s "Bandung Pride"',
     slug: 'bdg-ultra-heavyweight-tee-bandung-pride',

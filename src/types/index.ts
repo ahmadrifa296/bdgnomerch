@@ -19,6 +19,7 @@ export interface Product {
   inStock: boolean;
   stockCount: number;
   features: string[];
+  shopeeUrl?: string;
 }
 
 export interface FaqItem {

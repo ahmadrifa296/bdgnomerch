@@ -17,6 +17,7 @@ import { PRODUCTS } from '../data/products';
 import { formatPriceIDR, createWhatsAppOrderUrl, getBrandName } from '../utils/whatsapp';
 import { SizeChartModal } from '../components/ui/SizeChartModal';
 import { ProductCard } from '../components/ui/ProductCard';
+import { ShopeeIcon } from '../components/ui/Icons';
 
 export const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -246,20 +247,32 @@ export const ProductDetailPage: React.FC = () => {
             </div>
           </div>
 
-          {/* WhatsApp Direct Order CTA */}
-          <div className="pt-2 space-y-3">
+          {/* Order Actions */}
+          <div className="pt-2 space-y-2.5">
+            {product.shopeeUrl && (
+              <a
+                href={product.shopeeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#ee4d2d] hover:bg-[#d73211] text-white font-bold text-sm shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400"
+              >
+                <ShopeeIcon className="w-5 h-5 fill-current" />
+                <span>Beli di Shopee Official (@bdgnomercyy)</span>
+              </a>
+            )}
+
             <a
               href={createWhatsAppOrderUrl(product.name, selectedSize, quantity)}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-base shadow-xl shadow-green-700/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
+              className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
             >
               <MessageCircle className="w-5 h-5 fill-current" />
-              <span>Order via WhatsApp Sekarang</span>
+              <span>Order via WhatsApp CS</span>
             </a>
 
             <p className="text-[11px] text-center text-gray-400">
-              ⚡ Tombol ini otomatis menyusun rincian pesanan ({product.name}, Size: {selectedSize}, Qty: {quantity}) langsung ke chat WhatsApp CS kami.
+              Pemesanan WhatsApp otomatis menyusun rincian: {product.name} ({selectedSize}, {quantity} pcs).
             </p>
           </div>
 

@@ -24,6 +24,12 @@ export const getInstagramUrl = (): string => {
   return import.meta.env.VITE_INSTAGRAM_URL || DEFAULT_INSTAGRAM;
 };
 
+const DEFAULT_SHOPEE_URL = 'https://shopee.co.id/bdgnomercyy';
+
+export const getShopeeStoreUrl = (): string => {
+  return import.meta.env.VITE_SHOPEE_URL || DEFAULT_SHOPEE_URL;
+};
+
 export const formatPriceIDR = (price: number): string => {
   return new Intl.NumberFormat('id-ID', {
     style: 'currency',

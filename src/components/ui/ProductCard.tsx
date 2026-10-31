@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, CheckCircle2 } from 'lucide-react';
+import { ShopeeIcon } from './Icons';
 import type { Product } from '../../types';
 import { formatPriceIDR, createWhatsAppOrderUrl } from '../../utils/whatsapp';
 
@@ -105,24 +106,36 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="grid grid-cols-2 gap-2 mt-4 pt-1">
+        <div className={`grid ${product.shopeeUrl ? 'grid-cols-3' : 'grid-cols-2'} gap-1.5 mt-4 pt-1`}>
           <Link
             to={`/product/${product.id}`}
-            className="flex items-center justify-center gap-1 py-2.5 px-3 rounded-lg bg-white/5 hover:bg-white/10 text-gray-200 text-xs font-semibold transition-colors border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-200 text-xs font-semibold transition-colors border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <span>Detail</span>
-            <ArrowRight className="w-3.5 h-3.5 text-blue-400" />
           </Link>
 
           <a
             href={createWhatsAppOrderUrl(product.name, defaultSize)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1 py-2.5 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            className="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
           >
             <MessageCircle className="w-3.5 h-3.5 fill-current" />
-            <span>Order WA</span>
+            <span>WA</span>
           </a>
+
+          {product.shopeeUrl && (
+            <a
+              href={product.shopeeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-[#ee4d2d] hover:bg-[#d73211] text-white text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400"
+              title="Beli di Shopee"
+            >
+              <ShopeeIcon className="w-3.5 h-3.5" />
+              <span>Shopee</span>
+            </a>
+          )}
         </div>
       </div>
     </div>
