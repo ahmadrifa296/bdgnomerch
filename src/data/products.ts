@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     material: 'Cotton Combed 24s',
     printType: 'Plastisol',
     cutting: 'Regular Fit',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     inStock: true,
     stockCount: 40,
     features: [
@@ -25,8 +25,7 @@ export const PRODUCTS: Product[] = [
       'Cutting: Regular Fit yang pas dan nyaman dipakai harian',
       'Artwork eksklusif tengkorak bandana tartan khas casuals',
       'Tersedia pilihan warna Hitam & Putih'
-    ],
-    shopeeUrl: 'https://shopee.co.id/dim4swelah'
+    ]
   },
   {
     id: 'bdg-002',
@@ -43,7 +42,7 @@ export const PRODUCTS: Product[] = [
     material: 'Cotton Combed 24s',
     printType: 'Plastisol',
     cutting: 'Regular Fit',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['S', 'M', 'L', 'XL'],
     inStock: true,
     stockCount: 35,
     features: [
@@ -78,104 +77,6 @@ export const PRODUCTS: Product[] = [
       'Dikemas rapi dalam zip-lock pouch hitam eksklusif Ex Undis Sol'
     ],
     shopeeUrl: 'https://shopee.co.id/Sticker-Persib-Casual-Ex-Undis-Sol-Bandung-i.713581501.41834547390?extraParams=%7B%22display_model_id%22%3A311528753052%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134207-8258v-mtatzv9c70ua13'
-  },
-  {
-    id: 'bdg-001',
-    name: 'BDG Ultra Heavyweight Tee 24s "Bandung Pride"',
-    slug: 'bdg-ultra-heavyweight-tee-bandung-pride',
-    price: 165000,
-    originalPrice: 195000,
-    category: 'T-Shirt',
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
-    tags: ['Best Seller', 'Heavyweight', 'Bandung Culture'],
-    isBestSeller: true,
-    isNewRelease: false,
-    description: 'T-Shirt edisi kebanggaan BDG BOYS MERCH dengan bahan Cotton Combed 24s Heavyweight reaktif. Potongan boxy-fit modern dengan sablon Plastisol High Density tahan cuci berkali-kali.',
-    material: '100% Cotton Combed 24s Heavyweight (190-200 GSM)',
-    printType: 'High Density Plastisol Ink with Cure Finish',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    inStock: true,
-    stockCount: 28,
-    features: [
-      'Bahan tebal tidak menerawang dan sangat adem',
-      'Jahitan rantai standar distro Bandung',
-      'Rib kerah tebal 2.5cm anti melar',
-      'Bonus sticker pack resmi BDG BOYS'
-    ]
-  },
-  {
-    id: 'bdg-003',
-    name: 'BDG Terrace Casuals Graphic Tee "Bandung Till I Die"',
-    slug: 'bdg-terrace-casuals-graphic-tee',
-    price: 160000,
-    originalPrice: 190000,
-    category: 'T-Shirt',
-    image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80',
-    secondaryImage: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
-    tags: ['Matchday Ready', 'Terrace Culture', 'Plastisol'],
-    isBestSeller: false,
-    isNewRelease: true,
-    description: 'Grafis matchday suporter Bandung dengan typography vintage casuals Eropa. Desain grafis belakang full back print bertema tribun dan kebanggaan kota.',
-    material: 'Cotton Combed 24s Premium Soft Reaktif',
-    printType: 'Screen Print Plastisol Manual 6 Warna',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    inStock: true,
-    stockCount: 30,
-    features: [
-      'Kain lembut dan sejuk nyaman untuk iklim tropis dan nonton di tribun',
-      'Warna biru pekat reaktif tahan luntur',
-      'Sablon presisi dengan detail tajam',
-      'Jahitan overdeck 3 jarum sangat kuat'
-    ]
-  },
-  {
-    id: 'bdg-004',
-    name: 'BDG Dago Casuals Polo Tee "Striped Collar"',
-    slug: 'bdg-dago-casuals-polo-tee',
-    price: 185000,
-    originalPrice: 220000,
-    category: 'T-Shirt',
-    image: 'https://images.unsplash.com/photo-1625910513413-7d2d38ec9d41?auto=format&fit=crop&w=800&q=80',
-    tags: ['Casuals', 'Terrace Culture', 'Pique Cotton'],
-    isBestSeller: false,
-    isNewRelease: false,
-    description: 'Polo shirt berkarakter casuals khas football culture Eropa yang diadaptasi untuk streetwear anak muda Bandung. Bahan Lacoste Pique Cotton sejuk dengan bordir presisi.',
-    material: 'Premium Lacoste Pique Cotton 24s',
-    printType: 'Precision Computer Embroidery Badge',
-    sizes: ['S', 'M', 'L', 'XL'],
-    inStock: true,
-    stockCount: 22,
-    features: [
-      'Kerah rajut tebal bergaris kontras (tipping collar)',
-      'Kancing bermotif cangkang mutiara eksklusif',
-      'Potongan regular fit rapi untuk casual matchday',
-      'Ventilasi samping dengan pita herringbone kuat'
-    ]
-  },
-  {
-    id: 'bdg-005',
-    name: 'BDG Heritage Pocket Tee "Blue Tartan Accents"',
-    slug: 'bdg-heritage-pocket-tee-tartan',
-    price: 155000,
-    originalPrice: 185000,
-    category: 'T-Shirt',
-    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80',
-    tags: ['Pocket Tee', 'Tartan Detail', 'Minimalist'],
-    isBestSeller: false,
-    isNewRelease: false,
-    description: 'T-Shirt minimalis dengan aksen saku dada bermotif tartan biru-kuning khas BDG BOYS. Elegan untuk dipakai harian maupun acara santai.',
-    material: 'Cotton Combed 24s Heavy + Tartan Cotton Pocket',
-    printType: 'Woven Crest Label on Pocket',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    inStock: true,
-    stockCount: 18,
-    features: [
-      'Saku dada fungsional dengan material tartan woven',
-      'Woven emblem label BDG BOYS resmi',
-      'Kerah anti melar dengan double stitch',
-      'Regular relax fit'
-    ]
   }
 ];
 

@@ -38,8 +38,8 @@ export const AboutPage: React.FC = () => {
 
           <div className="pt-2 grid grid-cols-2 gap-3 text-white">
             <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
-              <span className="block text-xl font-bold text-blue-400 font-mono">Cotton 20s & 24s</span>
-              <span className="text-xs text-gray-400">Gramasi tebal 190-210 GSM</span>
+              <span className="block text-xl font-bold text-blue-400 font-mono">Cotton Combed 24s</span>
+              <span className="text-xs text-gray-400">Kain adem & nyaman dipakai</span>
             </div>
             <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
               <span className="block text-xl font-bold text-amber-400 font-mono">Vinyl Die-Cut</span>
@@ -80,7 +80,7 @@ export const AboutPage: React.FC = () => {
             <div className="space-y-1">
               <h3 className="text-xs sm:text-base font-bold text-white font-['Outfit']">Material Asli Heavyweight</h3>
               <p className="text-[11px] sm:text-xs text-gray-400 leading-relaxed">
-                Katun Combed 20s & 24s gramasi tebal (190-210 GSM) dan sablon plastisol awet yang tidak mudah retak.
+                Katun Combed 24s adem berkualitas dan sablon plastisol awet yang tidak mudah retak.
               </p>
             </div>
           </div>

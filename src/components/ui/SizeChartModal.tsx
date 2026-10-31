@@ -68,12 +68,6 @@ export const SizeChartModal: React.FC<SizeChartModalProps> = ({ isOpen, onClose,
                   <td className="py-2 px-3">77</td>
                   <td className="py-2 px-3">24</td>
                 </tr>
-                <tr className="hover:bg-white/5">
-                  <td className="py-2 px-3 font-bold text-blue-400">XXL</td>
-                  <td className="py-2 px-3">61 - 63</td>
-                  <td className="py-2 px-3">80</td>
-                  <td className="py-2 px-3">25</td>
-                </tr>
               </tbody>
             </table>
           </div>

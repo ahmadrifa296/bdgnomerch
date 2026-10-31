@@ -45,7 +45,7 @@ export const HomePage: React.FC = () => {
 
             {/* Subtitle */}
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Kaos katun 20s & 24s heavyweight serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
+              Kaos katun Combed 24s serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
             </p>
 
             {/* CTAs */}
@@ -74,8 +74,8 @@ export const HomePage: React.FC = () => {
               <div className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Cotton Heavy</h4>
-                  <p className="text-[11px] text-gray-400">Combed 20s & 24s tebal</p>
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider">Cotton Combed</h4>
+                  <p className="text-[11px] text-gray-400">Combed 24s halus & adem</p>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ export const HomePage: React.FC = () => {
             { 
               name: 'Kaos & T-Shirt', 
               query: 'T-Shirt', 
-              desc: 'Combed 20s & 24s Heavy',
+              desc: 'Combed 24s Regular Fit',
               badge: 'Apparel',
               badgeColor: 'bg-blue-600/20 text-blue-300 border-blue-500/30'
             },

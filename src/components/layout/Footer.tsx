@@ -115,22 +115,22 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
-                  Heavyweight T-Shirt 24s
+                  T-Shirt BDG SKULL
                 </Link>
               </li>
               <li>
                 <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
-                  Boxy Heavyweight Tee 20s
-                </Link>
-              </li>
-              <li>
-                <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
-                  Terrace Casuals Graphic Tee
+                  T-Shirt EX UNDIS SOL
                 </Link>
               </li>
               <li>
                 <Link to="/catalog?cat=Stiker" className="hover:text-blue-400 transition-colors">
                   10 Pcs Sticker Pack "Ex Undis Sol"
+                </Link>
+              </li>
+              <li>
+                <Link to="/catalog?cat=T-Shirt" className="hover:text-blue-400 transition-colors">
+                  Official Merch Cotton 24s
                 </Link>
               </li>
             </ul>

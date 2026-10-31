@@ -85,7 +85,7 @@ export const CatalogPage: React.FC = () => {
           KATALOG MERCHANDISE
         </h1>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl">
-          Temukan koleksi kaos katun 20s & 24s heavyweight serta official sticker pack eksklusif khas kultur Bandung.
+          Temukan koleksi kaos katun Combed 24s serta official sticker pack eksklusif khas kultur Bandung.
         </p>
       </div>
 
