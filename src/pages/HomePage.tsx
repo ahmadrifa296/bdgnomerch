@@ -289,7 +289,7 @@ export const HomePage: React.FC = () => {
             Butuh Rekomendasi Ukuran atau Cek Stok Ready?
           </h2>
           <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
-            Admin customer service kami siap membantu mengecek ketersediaan artikel dan ukuran langsung dari gudang Bandung.
+            Admin customer service kami siap membantu mengecek ketersediaan artikel dan panduan ukuran kaos secara langsung.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a

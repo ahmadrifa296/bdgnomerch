@@ -21,13 +21,21 @@ export const getWhatsAppNumber = (): string => {
 };
 
 export const getInstagramUrl = (): string => {
-  return import.meta.env.VITE_INSTAGRAM_URL || DEFAULT_INSTAGRAM;
+  const envUrl = import.meta.env.VITE_INSTAGRAM_URL;
+  if (envUrl && !envUrl.includes('bdgboysmerch')) {
+    return envUrl;
+  }
+  return DEFAULT_INSTAGRAM;
 };
 
 const DEFAULT_SHOPEE_URL = 'https://shopee.co.id/dim4swelah';
 
 export const getShopeeStoreUrl = (): string => {
-  return import.meta.env.VITE_SHOPEE_URL || DEFAULT_SHOPEE_URL;
+  const envUrl = import.meta.env.VITE_SHOPEE_URL;
+  if (envUrl && !envUrl.includes('bdgnomercyy')) {
+    return envUrl;
+  }
+  return DEFAULT_SHOPEE_URL;
 };
 
 export const STICKER_SHOPEE_URL = 'https://shopee.co.id/Sticker-Persib-Casual-Ex-Undis-Sol-Bandung-i.713581501.41834547390?extraParams=%7B%22display_model_id%22%3A311528753052%2C%22model_selection_logic%22%3A3%7D&image_ids=sg-11134207-8258v-mtatzv9c70ua13';
