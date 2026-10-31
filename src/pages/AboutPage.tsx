@@ -68,7 +68,7 @@ export const AboutPage: React.FC = () => {
             Standar Produksi Kami
           </h2>
           <p className="text-gray-400 text-xs sm:text-sm mt-1">
-            Prinsip yang kami pegang dalam merilis setiap artikel merchandise.
+            Prinsip yang kami pegang dalam merilis setiap produk merchandise.
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export const AboutPage: React.FC = () => {
           Ingin Menanyakan Stok atau Kunjungi Studio Kami?
         </h2>
         <p className="text-gray-300 text-xs sm:text-sm max-w-lg mx-auto">
-          Hubungi admin kami di WhatsApp untuk menanyakan stok artikel atau panduan memilih ukuran yang pas.
+          Hubungi admin kami di WhatsApp untuk menanyakan stok produk atau panduan memilih ukuran yang pas.
         </p>
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
           <Link

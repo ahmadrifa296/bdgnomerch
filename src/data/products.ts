@@ -161,15 +161,15 @@ export const CATEGORIES = [
 export const FAQS: FaqItem[] = [
   {
     question: 'Bagaimana alur pemesanan merchandise via WhatsApp?',
-    answer: 'Pilih produk dan ukuran di katalog, lalu klik tombol Order via WhatsApp. Pesan otomatis tersusun rapi dengan nama artikel, ukuran, dan jumlah. Admin kami akan langsung merespons dengan ketersediaan stok, ongkos kirim, dan nomor rekening resmi.'
+    answer: 'Pilih produk dan ukuran di katalog, lalu klik tombol Order via WhatsApp. Pesan otomatis tersusun rapi dengan nama produk, ukuran, dan jumlah. Admin kami akan langsung merespons dengan ketersediaan stok, ongkos kirim, dan nomor rekening resmi.'
   },
   {
     question: 'Apakah produk di website ini ready stock?',
-    answer: 'Semua artikel yang berstatus Ready Stock siap dikirim langsung dari workshop kami. Jika ukuran habis, tombol pemesanan akan menginfokan status pre-order atau restock berikutnya.'
+    answer: 'Semua produk yang berstatus Ready Stock siap dikirim langsung dari workshop kami. Jika ukuran habis, tombol pemesanan akan menginfokan status pre-order atau restock berikutnya.'
   },
   {
     question: 'Apakah bisa memesan lewat Shopee?',
-    answer: 'Ya! Untuk artikel seperti Sticker Pack dan merchandise resmi lainnya, Anda juga dapat memesan langsung melalui Shopee Official Store kami di shopee.co.id/dim4swelah.'
+    answer: 'Ya! Untuk produk seperti Sticker Pack dan merchandise resmi lainnya, Anda juga dapat memesan langsung melalui Shopee Official Store kami di shopee.co.id/dim4swelah.'
   },
   {
     question: 'Metode pembayaran dan rekening resmi apa saja yang didukung?',
@@ -181,6 +181,6 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: 'Apakah produk yang sudah dibeli bisa ditukar ukuran atau diretur?',
-    answer: 'Mohon maaf, kami tidak melayani penukaran ukuran (tukar size) maupun retur produk setelah pesanan diproses dan dikirim. Pastikan Anda telah memeriksa panduan ukuran (size chart) pada setiap artikel kaos sebelum memesan.'
+    answer: 'Mohon maaf, kami tidak melayani penukaran ukuran (tukar size) maupun retur produk setelah pesanan diproses dan dikirim. Pastikan Anda telah memeriksa panduan ukuran (size chart) pada setiap produk kaos sebelum memesan.'
   }
 ];

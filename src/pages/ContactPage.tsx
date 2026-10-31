@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Clock, 
-  Phone, 
-  Send, 
+import {
+  MapPin,
+  Clock,
+  Phone,
+  Send,
   ExternalLink
 } from 'lucide-react';
 import { InstagramIcon, ShopeeIcon } from '../components/ui/Icons';
@@ -34,10 +34,10 @@ export const ContactPage: React.FC = () => {
           Hubungi Kami
         </span>
         <h1 className="text-3xl sm:text-5xl font-black text-white font-['Outfit']">
-          KONTAK & STUDIO BANDUNG
+          KONTAK & STUDIO BDG BOYS MERCH
         </h1>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Punya pertanyaan seputar ukuran, ketersediaan artikel, atau ingin kolaborasi komunitas? Kami siap menyapa kawan-kawan semua.
+          Punya pertanyaan seputar ukuran, ketersediaan produk, atau ingin kolaborasi komunitas? Kami siap menyapa kawan-kawan semua.
         </p>
       </div>
 
@@ -77,7 +77,7 @@ export const ContactPage: React.FC = () => {
                 onChange={(e) => setTopic(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg bg-[#091222] border border-blue-900/40 text-white text-sm focus:outline-none focus:border-blue-500"
               >
-                <option value="Tanya Ketersediaan Stok" className="bg-[#091222] text-white">Tanya Ketersediaan Stok Artikel</option>
+                <option value="Tanya Ketersediaan Stok" className="bg-[#091222] text-white">Tanya Ketersediaan Stok Produk</option>
                 <option value="Cek Status Pengiriman & Resi" className="bg-[#091222] text-white">Cek Status Pengiriman / Nomor Resi</option>
                 <option value="Konsultasi Size & Bahan" className="bg-[#091222] text-white">Konsultasi Rekomendasi Ukuran (Size)</option>
                 <option value="Custom Order / Kolaborasi" className="bg-[#091222] text-white">Custom Order / Partnership Komunitas</option>
@@ -92,7 +92,7 @@ export const ContactPage: React.FC = () => {
                 value={userMsg}
                 onChange={(e) => setUserMsg(e.target.value)}
                 rows={4}
-                placeholder="Tuliskan pertanyaan atau detail artikel yang ingin kamu tanyakan..."
+                placeholder="Tuliskan pertanyaan atau detail produk yang ingin kamu tanyakan..."
                 className="w-full px-4 py-3 rounded-lg bg-[#091222] border border-blue-900/40 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               ></textarea>
             </div>

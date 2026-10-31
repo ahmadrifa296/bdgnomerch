@@ -59,7 +59,7 @@ export const HomePage: React.FC = () => {
               </Link>
 
               <a
-                href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau cek katalog dan tanya stok artikel ready.')}
+                href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau cek katalog dan tanya stok produk ready.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
@@ -308,7 +308,7 @@ export const HomePage: React.FC = () => {
             Butuh Rekomendasi Ukuran atau Cek Stok Ready?
           </h2>
           <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
-            Admin customer service kami siap membantu mengecek ketersediaan artikel dan panduan ukuran kaos secara langsung.
+            Admin customer service kami siap membantu mengecek ketersediaan produk dan panduan ukuran kaos secara langsung.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a

@@ -14,7 +14,7 @@ export const NotFoundPage: React.FC = () => {
           Halaman Tidak Ditemukan
         </h1>
         <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto">
-          Tautan yang kamu tuju mungkin salah ketik, sudah dipindahkan, atau artikel sudah habis masa tayang.
+          Tautan yang kamu tuju mungkin salah ketik, sudah dipindahkan, atau produk sudah tidak tersedia.
         </p>
       </div>
 

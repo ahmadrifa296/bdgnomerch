@@ -52,7 +52,7 @@ export const FloatingWhatsApp: React.FC = () => {
           <div className="p-4 space-y-3 bg-[#091222]">
             <div className="bg-[#0e1930] p-3 rounded-xl border border-blue-900/30 text-xs text-slate-200 leading-relaxed">
               <p className="font-semibold text-white mb-1">Sampurasun! 🙏</p>
-              Ada yang bisa kami bantu seputar ukuran, stok artikel, atau pengiriman hari ini?
+              Ada yang bisa kami bantu seputar ukuran, stok produk, atau pengiriman hari ini?
             </div>
 
             <form onSubmit={handleSend} className="space-y-2">
