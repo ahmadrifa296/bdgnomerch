@@ -25,16 +25,16 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="space-y-12 sm:space-y-20 pb-28 sm:pb-20 pt-14 sm:pt-20">
-      {/* HERO SECTION - FULL 1 LAYAR HP */}
-      <section className="min-h-[calc(100dvh-7.5rem)] flex flex-col justify-center py-4 sm:py-16 border-b border-white/10">
+      {/* HERO SECTION - FULL 1 LAYAR HP (Ends at CTA Buttons) */}
+      <section className="min-h-[calc(100dvh-7rem)] sm:min-h-[82vh] flex flex-col justify-center items-center py-6 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center space-y-4 sm:space-y-6">
             {/* Authentic Brand Badge */}
             <div className="flex justify-center">
               <img
                 src="/logo.jpg"
                 alt="BDG BOYS MERCH Official Badge"
-                className="w-24 h-24 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
+                className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
               />
             </div>
 
@@ -44,64 +44,66 @@ export const HomePage: React.FC = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-gray-300 text-xs sm:text-base leading-relaxed max-w-2xl mx-auto">
+            <p className="text-gray-300 text-xs sm:text-base leading-relaxed max-w-xl mx-auto px-2">
               Kaos katun Combed 24s serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-1">
+            {/* CTAs - END OF SCREEN 1 */}
+            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 pt-2 max-w-md mx-auto">
               <Link
                 to="/catalog"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60"
               >
                 <span>Lihat Katalog Produk</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
 
               <a
                 href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau cek katalog dan tanya stok produk ready.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                 <span>Pesan Cepat via WhatsApp</span>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Honest Product Standards (Phone Optimized) */}
-            <div className="pt-4 sm:pt-8 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-left border-t border-white/10 mt-4 sm:mt-10">
-              <div className="flex items-start gap-2.5 p-2.5 sm:p-0 rounded-xl bg-white/[0.03] sm:bg-transparent border border-white/5 sm:border-0">
-                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Cotton Combed</h4>
-                  <p className="text-[10px] sm:text-[11px] text-gray-300">Combed 24s halus & adem</p>
-                </div>
-              </div>
+      {/* HONEST PRODUCT STANDARDS (Shown on scroll) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-left">
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+            <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
+            <div>
+              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Cotton Combed</h4>
+              <p className="text-[10px] sm:text-[11px] text-gray-300">Combed 24s halus & adem</p>
+            </div>
+          </div>
 
-              <div className="flex items-start gap-2.5 p-2.5 sm:p-0 rounded-xl bg-white/[0.03] sm:bg-transparent border border-white/5 sm:border-0">
-                <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Sablon & Vinyl</h4>
-                  <p className="text-[10px] sm:text-[11px] text-gray-300">Plastisol & Waterproof UV</p>
-                </div>
-              </div>
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+            <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
+            <div>
+              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Sablon & Vinyl</h4>
+              <p className="text-[10px] sm:text-[11px] text-gray-300">Plastisol & Waterproof UV</p>
+            </div>
+          </div>
 
-              <div className="flex items-start gap-2.5 p-2.5 sm:p-0 rounded-xl bg-white/[0.03] sm:bg-transparent border border-white/5 sm:border-0">
-                <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Kirim Cepat</h4>
-                  <p className="text-[10px] sm:text-[11px] text-gray-300">JNE, J&T, SiCepat</p>
-                </div>
-              </div>
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+            <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mt-0.5" />
+            <div>
+              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Kirim Cepat</h4>
+              <p className="text-[10px] sm:text-[11px] text-gray-300">JNE, J&T, SiCepat</p>
+            </div>
+          </div>
 
-              <div className="flex items-start gap-2.5 p-2.5 sm:p-0 rounded-lg bg-white/[0.03] sm:bg-transparent border border-white/5 sm:border-0">
-                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Quality Control</h4>
-                  <p className="text-[10px] sm:text-[11px] text-gray-300">Inspeksi rapi sebelum kirim</p>
-                </div>
-              </div>
+          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0 mt-0.5" />
+            <div>
+              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Quality Control</h4>
+              <p className="text-[10px] sm:text-[11px] text-gray-300">Inspeksi rapi sebelum kirim</p>
             </div>
           </div>
         </div>
