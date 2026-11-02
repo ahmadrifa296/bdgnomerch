@@ -24,17 +24,21 @@ export const ProductDetailPage: React.FC = () => {
   const product = PRODUCTS.find((p) => p.id === id);
 
   // States
+  const [selectedColor, setSelectedColor] = useState<string>(
+    product?.colors && product.colors.length > 0 ? product.colors[0] : ''
+  );
   const [selectedSize, setSelectedSize] = useState<string>(product?.sizes[0] || 'L');
   const [quantity, setQuantity] = useState<number>(1);
   const [activeImage, setActiveImage] = useState<string>(product?.image || '');
   const [isSizeChartOpen, setIsSizeChartOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  // Update active image when product changes
+  // Update active image and defaults when product changes
   React.useEffect(() => {
     if (product) {
       setActiveImage(product.image);
       setSelectedSize(product.sizes[0] || 'L');
+      setSelectedColor(product.colors && product.colors.length > 0 ? product.colors[0] : '');
       setQuantity(1);
       window.scrollTo(0, 0);
     }
@@ -182,6 +186,46 @@ export const ProductDetailPage: React.FC = () => {
             )}
           </div>
 
+          {/* Color Selector */}
+          {product.colors && product.colors.length > 0 && (
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">
+                  Pilih Warna Kaos:
+                </span>
+                <span className="text-xs font-bold text-blue-400">
+                  {selectedColor}
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2.5 flex-wrap">
+                {product.colors.map((c) => {
+                  const isBlack = c.toLowerCase().includes('hitam') || c.toLowerCase().includes('black');
+                  return (
+                    <button
+                      key={c}
+                      onClick={() => setSelectedColor(c)}
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                        selectedColor === c
+                          ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400'
+                          : 'bg-[#141b2d] text-gray-300 hover:bg-white/10 hover:text-white border border-white/10'
+                      }`}
+                    >
+                      <span
+                        className={`w-3.5 h-3.5 rounded-full border ${
+                          isBlack
+                            ? 'bg-black border-white/50 shadow-sm'
+                            : 'bg-white border-black/40 shadow-sm'
+                        }`}
+                      />
+                      <span>{c}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Size Selector */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
@@ -263,7 +307,7 @@ export const ProductDetailPage: React.FC = () => {
             )}
 
             <a
-              href={createWhatsAppOrderUrl(product.name, selectedSize, quantity)}
+              href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
@@ -273,7 +317,7 @@ export const ProductDetailPage: React.FC = () => {
             </a>
 
             <p className="text-[11px] text-center text-gray-400">
-              Pemesanan WhatsApp otomatis menyusun rincian: {product.name} ({selectedSize}, {quantity} pcs).
+              Pemesanan WhatsApp otomatis menyusun rincian: {product.name} {selectedColor ? `(Warna ${selectedColor}, Size ${selectedSize}, ${quantity} pcs)` : `(Size ${selectedSize}, ${quantity} pcs)`}.
             </p>
           </div>
 
@@ -313,6 +357,12 @@ export const ProductDetailPage: React.FC = () => {
                 <div className="flex justify-between py-1 border-b border-white/5">
                   <span className="text-gray-400">Pola / Cutting:</span>
                   <span className="text-white font-medium">{product.cutting}</span>
+                </div>
+              )}
+              {product.colors && product.colors.length > 0 && (
+                <div className="flex justify-between py-1 border-b border-white/5">
+                  <span className="text-gray-400">Pilihan Warna:</span>
+                  <span className="text-white font-medium">{product.colors.join(' & ')}</span>
                 </div>
               )}
               <div className="flex justify-between py-1">

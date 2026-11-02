@@ -16,6 +16,7 @@ export interface Product {
   material: string;
   printType: string;
   cutting?: string;
+  colors?: string[];
   sizes: string[];
   inStock: boolean;
   stockCount: number;

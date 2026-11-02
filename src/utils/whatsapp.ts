@@ -54,12 +54,14 @@ export const createWhatsAppOrderUrl = (
   productName: string,
   size: string = 'L',
   quantity: number = 1,
+  color?: string,
   notes: string = ''
 ): string => {
   const phone = getWhatsAppNumber();
   const brand = getBrandName();
 
-  const message = `Halo Admin ${brand}! 👋\nSaya ingin memesan merchandise berikut:\n\n📦 *Produk:* ${productName}\n📏 *Size:* ${size}\n🔢 *Jumlah:* ${quantity} pcs${notes ? `\n📝 *Catatan:* ${notes}` : ''}\n\nMohon info ketersediaan stok, total harga, dan ongkir ke alamat saya. Terima kasih!`;
+  const colorText = color ? `\n🎨 *Warna:* ${color}` : '';
+  const message = `Halo Admin ${brand}! 👋\nSaya ingin memesan merchandise berikut:\n\n📦 *Produk:* ${productName}${colorText}\n📏 *Size:* ${size}\n🔢 *Jumlah:* ${quantity} pcs${notes ? `\n📝 *Catatan:* ${notes}` : ''}\n\nMohon info ketersediaan stok, total harga, dan ongkir ke alamat saya. Terima kasih!`;
 
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 };
