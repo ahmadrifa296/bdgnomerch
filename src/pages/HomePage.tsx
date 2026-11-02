@@ -24,35 +24,35 @@ export const HomePage: React.FC = () => {
   const newReleases = PRODUCTS.filter((p) => p.isNewRelease || !p.isBestSeller).slice(0, 4);
 
   return (
-    <div className="space-y-12 sm:space-y-20 pb-28 sm:pb-20 pt-14 sm:pt-20">
-      {/* HERO SECTION - FULL 1 LAYAR HP & BALANCED ON LAPTOP */}
-      <section className="min-h-[calc(100dvh-7rem)] lg:min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center py-6 sm:py-16 lg:py-20 border-b border-white/10">
+    <div className="space-y-12 sm:space-y-16 pb-28 sm:pb-20 pt-14 sm:pt-16">
+      {/* HERO SECTION - EXACT 1 FULL SCREEN ON LAPTOP & MOBILE */}
+      <section className="min-h-[calc(100dvh-7rem)] sm:h-[calc(100vh-4rem)] flex flex-col justify-center items-center py-4 sm:py-6 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl lg:max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-4 sm:space-y-6 lg:space-y-8">
+          <div className="max-w-3xl lg:max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-3.5 sm:space-y-4 lg:space-y-5">
             {/* Authentic Brand Badge */}
             <div className="flex justify-center">
               <img
                 src="/logo.jpg"
                 alt="BDG BOYS MERCH Official Badge"
-                className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
+                className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
               />
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.12] lg:leading-[1.08] font-['Outfit']">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15] font-['Outfit']">
               MERCHANDISE RESMI DARI BDG BOYS MERCH.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-gray-300 text-xs sm:text-base lg:text-lg leading-relaxed max-w-xl lg:max-w-2xl mx-auto px-2">
+            <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl lg:max-w-2xl mx-auto px-2">
               Kaos katun Combed 24s serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
             </p>
 
-            {/* CTAs - END OF SCREEN 1 ON MOBILE */}
-            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-2 max-w-md sm:max-w-none mx-auto">
+            {/* CTAs - END OF SCREEN 1 */}
+            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3.5 pt-1 sm:pt-2 max-w-md sm:max-w-none mx-auto">
               <Link
                 to="/catalog"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 lg:py-4.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm sm:text-base lg:text-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60 hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Lihat Katalog Produk</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -62,7 +62,7 @@ export const HomePage: React.FC = () => {
                 href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau cek katalog dan tanya stok produk ready.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 lg:py-4.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm sm:text-base lg:text-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60 hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                 <span>Pesan Cepat via WhatsApp</span>
