@@ -25,34 +25,34 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="space-y-12 sm:space-y-20 pb-28 sm:pb-20 pt-14 sm:pt-20">
-      {/* HERO SECTION - FULL 1 LAYAR HP (Ends at CTA Buttons) */}
-      <section className="min-h-[calc(100dvh-7rem)] sm:min-h-[82vh] flex flex-col justify-center items-center py-6 sm:py-16 border-b border-white/10">
+      {/* HERO SECTION - FULL 1 LAYAR HP & BALANCED ON LAPTOP */}
+      <section className="min-h-[calc(100dvh-7rem)] lg:min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center py-6 sm:py-16 lg:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center space-y-4 sm:space-y-6">
+          <div className="max-w-3xl lg:max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-4 sm:space-y-6 lg:space-y-8">
             {/* Authentic Brand Badge */}
             <div className="flex justify-center">
               <img
                 src="/logo.jpg"
                 alt="BDG BOYS MERCH Official Badge"
-                className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
+                className="w-28 h-28 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-full object-cover border-4 border-blue-400/40 shadow-2xl shadow-blue-950/80 hover:scale-105 transition-transform duration-300"
               />
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] font-['Outfit']">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.12] lg:leading-[1.08] font-['Outfit']">
               MERCHANDISE RESMI DARI BDG BOYS MERCH.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-gray-300 text-xs sm:text-base leading-relaxed max-w-xl mx-auto px-2">
+            <p className="text-gray-300 text-xs sm:text-base lg:text-lg leading-relaxed max-w-xl lg:max-w-2xl mx-auto px-2">
               Kaos katun Combed 24s serta official sticker pack eksklusif khas kultur jalanan Bandung. Pemesanan langsung ke WhatsApp admin resmi atau Shopee Official tanpa registrasi akun.
             </p>
 
-            {/* CTAs - END OF SCREEN 1 */}
-            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 pt-2 max-w-md mx-auto">
+            {/* CTAs - END OF SCREEN 1 ON MOBILE */}
+            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-2 max-w-md sm:max-w-none mx-auto">
               <Link
                 to="/catalog"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 lg:py-4.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm sm:text-base lg:text-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-xl shadow-blue-950/60 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Lihat Katalog Produk</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -62,7 +62,7 @@ export const HomePage: React.FC = () => {
                 href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH, saya mau cek katalog dan tanya stok produk ready.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 lg:py-4.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm sm:text-base lg:text-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                 <span>Pesan Cepat via WhatsApp</span>
@@ -74,36 +74,36 @@ export const HomePage: React.FC = () => {
 
       {/* HONEST PRODUCT STANDARDS (Shown on scroll) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-left">
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-            <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6 text-left">
+          <div className="flex items-start gap-3 p-3 sm:p-4 lg:p-5 rounded-xl lg:rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-blue-500/20 transition-all duration-200">
+            <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6 text-blue-400 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Cotton Combed</h4>
-              <p className="text-[10px] sm:text-[11px] text-gray-300">Combed 24s halus & adem</p>
+              <h4 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white uppercase tracking-wider">Cotton Combed</h4>
+              <p className="text-[10px] sm:text-[11px] lg:text-xs text-gray-300 mt-0.5">Combed 24s halus & adem</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-            <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 shrink-0 mt-0.5" />
+          <div className="flex items-start gap-3 p-3 sm:p-4 lg:p-5 rounded-xl lg:rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-blue-500/20 transition-all duration-200">
+            <Layers className="w-5 h-5 lg:w-6 lg:h-6 text-blue-400 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Sablon & Vinyl</h4>
-              <p className="text-[10px] sm:text-[11px] text-gray-300">Plastisol & Waterproof UV</p>
+              <h4 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white uppercase tracking-wider">Sablon & Vinyl</h4>
+              <p className="text-[10px] sm:text-[11px] lg:text-xs text-gray-300 mt-0.5">Plastisol & Waterproof UV</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-            <Truck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mt-0.5" />
+          <div className="flex items-start gap-3 p-3 sm:p-4 lg:p-5 rounded-xl lg:rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-blue-500/20 transition-all duration-200">
+            <Truck className="w-5 h-5 lg:w-6 lg:h-6 text-emerald-400 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Kirim Cepat</h4>
-              <p className="text-[10px] sm:text-[11px] text-gray-300">JNE, J&T, SiCepat</p>
+              <h4 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white uppercase tracking-wider">Kirim Cepat</h4>
+              <p className="text-[10px] sm:text-[11px] lg:text-xs text-gray-300 mt-0.5">JNE, J&T, SiCepat</p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0 mt-0.5" />
+          <div className="flex items-start gap-3 p-3 sm:p-4 lg:p-5 rounded-xl lg:rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-blue-500/20 transition-all duration-200">
+            <CheckCircle2 className="w-5 h-5 lg:w-6 lg:h-6 text-amber-400 shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider">Quality Control</h4>
-              <p className="text-[10px] sm:text-[11px] text-gray-300">Inspeksi rapi sebelum kirim</p>
+              <h4 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white uppercase tracking-wider">Quality Control</h4>
+              <p className="text-[10px] sm:text-[11px] lg:text-xs text-gray-300 mt-0.5">Inspeksi rapi sebelum kirim</p>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export const HomePage: React.FC = () => {
 
       {/* CATEGORIES GRID */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between gap-4 mb-4">
+        <div className="flex items-end justify-between gap-4 mb-4 sm:mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white font-['Outfit']">Kategori Produk</h2>
             <p className="text-xs sm:text-sm text-gray-400 mt-0.5">Pilih koleksi kaos atau official sticker pack.</p>
@@ -122,19 +122,19 @@ export const HomePage: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
           {[
             { 
               name: 'Kaos & T-Shirt', 
               query: 'T-Shirt', 
-              desc: 'Combed 24s Regular Fit',
+              desc: 'Combed 24s Regular Fit khas streetwear Bandung',
               badge: 'Apparel',
               badgeColor: 'bg-blue-600/20 text-blue-300 border-blue-500/30'
             },
             { 
               name: 'Sticker Pack', 
               query: 'Stiker', 
-              desc: 'Vinyl Die-Cut Waterproof',
+              desc: 'Vinyl Die-Cut Waterproof anti air & tahan UV',
               badge: 'Aksesoris',
               badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/30'
             },
@@ -142,18 +142,18 @@ export const HomePage: React.FC = () => {
             <Link
               key={cat.name}
               to={`/catalog?cat=${cat.query}`}
-              className="p-3.5 sm:p-4 rounded-xl bg-[#091222] hover:bg-[#0e1930] border border-blue-950/80 hover:border-blue-500/40 transition-all duration-200 block group shadow-sm"
+              className="p-4 sm:p-6 lg:p-7 rounded-xl lg:rounded-2xl bg-[#091222] hover:bg-[#0e1930] border border-blue-950/80 hover:border-blue-500/40 transition-all duration-300 block group shadow-sm hover:shadow-xl hover:shadow-blue-950/40 hover:-translate-y-1"
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider border ${cat.badgeColor}`}>
+              <div className="flex items-center justify-between mb-3">
+                <span className={`px-2.5 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-wider border ${cat.badgeColor}`}>
                   {cat.badge}
                 </span>
-                <span className="text-xs text-blue-400 group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-xs sm:text-sm text-blue-400 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
               </div>
-              <h3 className="font-bold text-sm sm:text-base text-white group-hover:text-blue-300 transition-colors leading-tight">
+              <h3 className="font-bold text-base sm:text-xl lg:text-2xl text-white group-hover:text-blue-300 transition-colors leading-tight">
                 {cat.name}
               </h3>
-              <p className="text-[11px] sm:text-xs text-gray-400 mt-1 line-clamp-1">
+              <p className="text-xs sm:text-sm text-gray-400 mt-1.5 line-clamp-2">
                 {cat.desc}
               </p>
             </Link>
@@ -177,7 +177,7 @@ export const HomePage: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {bestSellers.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -262,7 +262,7 @@ export const HomePage: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {newReleases.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -17,7 +17,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const defaultSize = product.sizes[0] || 'L';
 
   return (
-    <div className="group flex flex-col bg-[#091222] rounded-xl border border-blue-950/80 hover:border-blue-500/50 shadow-md hover:shadow-xl hover:shadow-blue-950/40 transition-all duration-300 overflow-hidden text-left relative">
+    <div className="group flex flex-col bg-[#091222] rounded-xl lg:rounded-2xl border border-blue-950/80 hover:border-blue-500/50 shadow-md hover:shadow-2xl hover:shadow-blue-950/40 transition-all duration-300 overflow-hidden text-left relative hover:-translate-y-1">
       {/* Thumbnail Container (1:1 Aspect Ratio) */}
       <Link 
         to={`/product/${product.id}`} 
@@ -27,7 +27,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           src={product.image}
           alt={product.name}
           loading="lazy"
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
 
         {/* BDG Authentic Badges on Top-Left */}
@@ -62,14 +62,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </Link>
 
       {/* BDG Product Details */}
-      <div className="p-2.5 sm:p-3.5 flex flex-col flex-1 justify-between gap-1.5 sm:gap-2">
+      <div className="p-2.5 sm:p-3.5 lg:p-4 flex flex-col flex-1 justify-between gap-1.5 sm:gap-2">
         <div>
           {/* Title with BDG Brand Tag */}
           <Link 
             to={`/product/${product.id}`} 
             className="hover:text-blue-400 transition-colors focus:outline-none block"
           >
-            <h3 className="font-semibold text-white text-xs sm:text-[13px] leading-snug line-clamp-2 min-h-[32px] sm:min-h-[38px] group-hover:text-blue-300 transition-colors">
+            <h3 className="font-semibold text-white text-xs sm:text-[13px] lg:text-sm leading-snug line-clamp-2 min-h-[32px] sm:min-h-[38px] lg:min-h-[42px] group-hover:text-blue-300 transition-colors">
               <span className="inline-flex items-center px-1.5 py-0.5 mr-1.5 rounded bg-blue-900/40 text-blue-300 border border-blue-500/30 text-[9px] font-black uppercase tracking-wider align-middle">
                 BDG
               </span>
@@ -79,7 +79,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
           {/* Authentic Price Section (Streetwear Terrace Style) */}
           <div className="mt-1.5 sm:mt-2 flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
-            <span className="text-sm sm:text-lg font-black text-white font-['Outfit'] tracking-tight">
+            <span className="text-sm sm:text-lg lg:text-xl font-black text-white font-['Outfit'] tracking-tight">
               {formatPriceIDR(product.price)}
             </span>
 
@@ -119,7 +119,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             href={createWhatsAppOrderUrl(product.name, defaultSize)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold shadow-sm transition-colors"
+            className="flex items-center justify-center gap-1.5 py-1.5 lg:py-2 px-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] lg:text-xs font-bold shadow-sm transition-colors"
             title="Chat Order WhatsApp"
           >
             <MessageCircle className="w-3.5 h-3.5 fill-current shrink-0" />
@@ -131,7 +131,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               href={product.shopeeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-[11px] font-bold shadow-sm transition-colors"
+              className="flex items-center justify-center gap-1.5 py-1.5 lg:py-2 px-2 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-[11px] lg:text-xs font-bold shadow-sm transition-colors"
               title="Beli di Shopee Official"
             >
               <ShopeeIcon className="w-3.5 h-3.5 fill-current shrink-0" />
@@ -140,7 +140,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           ) : (
             <Link
               to={`/product/${product.id}`}
-              className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-white/10 hover:bg-white/15 text-gray-200 text-[11px] font-bold shadow-sm transition-colors border border-white/10"
+              className="flex items-center justify-center gap-1 py-1.5 lg:py-2 px-2 rounded-lg bg-white/10 hover:bg-white/15 text-gray-200 text-[11px] lg:text-xs font-bold shadow-sm transition-colors border border-white/10"
             >
               <span>Detail</span>
             </Link>
