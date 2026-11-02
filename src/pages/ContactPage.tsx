@@ -27,23 +27,23 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="pt-20 sm:pt-28 pb-28 sm:pb-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-8 sm:space-y-16">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="text-xs uppercase tracking-widest font-bold text-blue-400">
+      <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
+        <span className="text-[11px] sm:text-xs uppercase tracking-widest font-bold text-blue-400">
           Hubungi Kami
         </span>
-        <h1 className="text-3xl sm:text-5xl font-black text-white font-['Outfit']">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white font-['Outfit']">
           KONTAK & STUDIO BDG BOYS MERCH
         </h1>
-        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-300 text-xs sm:text-base leading-relaxed">
           Punya pertanyaan seputar ukuran, ketersediaan produk, atau ingin kolaborasi komunitas? Kami siap menyapa kawan-kawan semua.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Left Column: Direct WhatsApp Form */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-6">
+        <div className="p-4 sm:p-8 rounded-2xl bg-[#070e1c] border border-blue-900/40 space-y-4 sm:space-y-6 shadow-xl">
           <div>
             <h2 className="text-2xl font-bold text-white font-['Outfit']">
               Kirim Pesan Langsung ke Admin

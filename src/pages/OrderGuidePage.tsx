@@ -47,7 +47,7 @@ export const OrderGuidePage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-24 sm:pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+    <div className="pt-20 sm:pt-28 pb-28 sm:pb-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-8 sm:space-y-16">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3">
         <span className="text-xs uppercase tracking-widest font-bold text-blue-400">

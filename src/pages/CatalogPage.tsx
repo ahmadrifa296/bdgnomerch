@@ -75,22 +75,22 @@ export const CatalogPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="pt-20 sm:pt-28 pb-28 sm:pb-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-5 sm:space-y-8">
       {/* Page Header */}
-      <div className="space-y-3">
-        <span className="text-xs uppercase tracking-wider font-bold text-blue-400">
+      <div className="space-y-1.5 sm:space-y-3">
+        <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold text-blue-400">
           Koleksi Lengkap BDG BOYS MERCH
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-['Outfit']">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white font-['Outfit']">
           KATALOG MERCHANDISE
         </h1>
-        <p className="text-gray-400 text-sm sm:text-base max-w-2xl">
+        <p className="text-gray-400 text-xs sm:text-base max-w-2xl">
           Temukan koleksi kaos katun Combed 24s serta official sticker pack eksklusif khas kultur Bandung.
         </p>
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="p-4 sm:p-6 rounded-2xl bg-[#0d172a] border border-blue-900/30 space-y-4">
+      <div className="p-3 sm:p-5 rounded-2xl bg-[#070e1c] border border-blue-900/40 space-y-3 sm:space-y-4 shadow-lg">
         {/* Search & Sort Controls */}
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           {/* Search Input */}

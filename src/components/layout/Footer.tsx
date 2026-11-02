@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   const whatsappNumber = getWhatsAppNumber();
 
   return (
-    <footer className="bg-[#060e1c] border-t border-blue-900/30 pt-16 pb-12 text-gray-400">
+    <footer className="bg-[#060e1c] border-t border-blue-900/30 pt-12 pb-24 md:pb-12 text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Info */}

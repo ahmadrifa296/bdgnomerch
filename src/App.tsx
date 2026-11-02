@@ -3,6 +3,7 @@ import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { ScrollToTop } from './components/layout/ScrollToTop';
 import { FloatingWhatsApp } from './components/ui/FloatingWhatsApp';
+import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import { HomePage } from './pages/HomePage';
 import { CatalogPage } from './pages/CatalogPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
@@ -30,6 +31,7 @@ export function App() {
         </main>
         <Footer />
         <FloatingWhatsApp />
+        <MobileBottomNav />
       </div>
     </BrowserRouter>
   );

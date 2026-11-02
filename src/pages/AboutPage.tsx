@@ -9,16 +9,16 @@ export const AboutPage: React.FC = () => {
   const instagramUrl = getInstagramUrl();
 
   return (
-    <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="pt-20 sm:pt-28 pb-28 sm:pb-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="text-xs uppercase tracking-widest font-bold text-blue-400">
+      <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3">
+        <span className="text-[11px] sm:text-xs uppercase tracking-widest font-bold text-blue-400">
           Tentang Brand
         </span>
-        <h1 className="text-3xl sm:text-5xl font-black text-white font-['Outfit']">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white font-['Outfit']">
           CERITA DI BALIK {brandName}
         </h1>
-        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-300 text-xs sm:text-base leading-relaxed">
           Kultur suporter sepak bola, semangat kemandirian, dan warisan garmen jalanan kota Bandung.
         </p>
       </div>

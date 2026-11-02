@@ -75,7 +75,7 @@ export const ProductDetailPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="pt-20 sm:pt-28 pb-28 sm:pb-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
         <Link to="/" className="hover:text-white transition-colors">Beranda</Link>
@@ -406,6 +406,30 @@ export const ProductDetailPage: React.FC = () => {
           </div>
         </section>
       )}
+
+      {/* Mobile Sticky Bottom Order Bar (Phone-First UX) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#070e1c]/95 backdrop-blur-lg border-t border-blue-900/40 p-3 shadow-2xl safe-area-inset-bottom">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <span className="text-[10px] text-gray-400 block leading-tight">
+              Total ({quantity} pcs {selectedColor ? `• ${selectedColor}` : ''}):
+            </span>
+            <span className="text-base font-black text-white font-mono">
+              {formatPriceIDR(product.price * quantity)}
+            </span>
+          </div>
+
+          <a
+            href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
+          >
+            <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+            <span>Order WA Sekarang</span>
+          </a>
+        </div>
+      </div>
 
       {/* Size Chart Modal */}
       <SizeChartModal
