@@ -16,7 +16,7 @@ export const FloatingWhatsApp: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-20 right-3.5 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end">
+    <div className="hidden md:flex fixed bottom-6 right-6 z-40 flex-col items-end">
       {/* Pop-up Card */}
       {isOpen && (
         <div className="mb-3 w-[calc(100vw-28px)] max-w-sm sm:w-96 bg-[#0d172a] rounded-2xl border border-blue-900/40 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-200">
