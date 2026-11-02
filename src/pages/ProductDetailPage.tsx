@@ -24,21 +24,27 @@ export const ProductDetailPage: React.FC = () => {
   const product = PRODUCTS.find((p) => p.id === id);
 
   // States
-  const [selectedColor, setSelectedColor] = useState<string>(
-    product?.colors && product.colors.length > 0 ? product.colors[0] : ''
-  );
-  const [selectedSize, setSelectedSize] = useState<string>(product?.sizes[0] || 'L');
+  const [selectedColor, setSelectedColor] = useState<string>('');
+  const [selectedSize, setSelectedSize] = useState<string>('');
   const [quantity, setQuantity] = useState<number>(1);
   const [activeImage, setActiveImage] = useState<string>(product?.image || '');
   const [isSizeChartOpen, setIsSizeChartOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const optionsRef = React.useRef<HTMLDivElement>(null);
 
-  // Update active image and defaults when product changes
+  const scrollToOptions = () => {
+    if (optionsRef.current) {
+      optionsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  // Update active image and reset defaults when product changes
   React.useEffect(() => {
     if (product) {
       setActiveImage(product.image);
-      setSelectedSize(product.sizes[0] || 'L');
-      setSelectedColor(product.colors && product.colors.length > 0 ? product.colors[0] : '');
+      // Only auto-select if there is exactly 1 option (like 1-pack sticker)
+      setSelectedSize(product.sizes.length === 1 ? product.sizes[0] : '');
+      setSelectedColor(product.colors && product.colors.length === 1 ? product.colors[0] : '');
       setQuantity(1);
       window.scrollTo(0, 0);
     }
@@ -65,6 +71,13 @@ export const ProductDetailPage: React.FC = () => {
     : 0;
 
   const relatedProducts = PRODUCTS.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4);
+
+  // Validation: Must select all applicable options before ordering
+  const requiresColor = Boolean(product.colors && product.colors.length > 0);
+  const isColorSelected = !requiresColor || Boolean(selectedColor);
+  const requiresSize = Boolean(product.sizes && product.sizes.length > 0);
+  const isSizeSelected = !requiresSize || Boolean(selectedSize);
+  const isReadyToOrder = isColorSelected && isSizeSelected;
 
   const handleShare = () => {
     if (navigator.clipboard) {
@@ -186,77 +199,103 @@ export const ProductDetailPage: React.FC = () => {
             )}
           </div>
 
-          {/* Color Selector */}
-          {product.colors && product.colors.length > 0 && (
+          {/* Product Options Container (Color & Size) */}
+          <div ref={optionsRef} className="space-y-6">
+            {/* Color Selector */}
+            {product.colors && product.colors.length > 0 && (
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <span>Pilih Warna Kaos:</span>
+                    <span className="text-rose-400">*</span>
+                  </span>
+                  {selectedColor ? (
+                    <span className="text-xs font-bold text-blue-400 bg-blue-950/60 px-2.5 py-0.5 rounded-md border border-blue-500/30">
+                      {selectedColor}
+                    </span>
+                  ) : (
+                    <span className="text-[11px] font-semibold text-amber-400 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-500/30 animate-pulse">
+                      Wajib Dipilih
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  {product.colors.map((c) => {
+                    const isBlack = c.toLowerCase().includes('hitam') || c.toLowerCase().includes('black');
+                    const isSelected = selectedColor === c;
+                    return (
+                      <button
+                        key={c}
+                        onClick={() => setSelectedColor(c)}
+                        className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+                          isSelected
+                            ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400 scale-[1.02]'
+                            : 'bg-[#141b2d] text-gray-300 hover:border-blue-400/60 hover:text-white border border-white/10'
+                        }`}
+                      >
+                        <span
+                          className={`w-3.5 h-3.5 rounded-full border ${
+                            isBlack
+                              ? 'bg-black border-white/50 shadow-sm'
+                              : 'bg-white border-black/40 shadow-sm'
+                          }`}
+                        />
+                        <span>{c}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Size Selector */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">
-                  Pilih Warna Kaos:
-                </span>
-                <span className="text-xs font-bold text-blue-400">
-                  {selectedColor}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <span>{product.category === 'Stiker' ? 'Pilihan Paket:' : 'Pilih Ukuran:'}</span>
+                    <span className="text-rose-400">*</span>
+                  </span>
+                  {selectedSize ? (
+                    <span className="text-xs font-bold text-blue-400 bg-blue-950/60 px-2.5 py-0.5 rounded-md border border-blue-500/30 font-mono">
+                      {selectedSize}
+                    </span>
+                  ) : (
+                    <span className="text-[11px] font-semibold text-amber-400 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-500/30 animate-pulse">
+                      Wajib Dipilih
+                    </span>
+                  )}
+                </div>
+                {product.category !== 'Stiker' && (
+                  <button
+                    onClick={() => setIsSizeChartOpen(true)}
+                    className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    <Ruler className="w-3.5 h-3.5" />
+                    <span>Panduan Ukuran (Size Chart)</span>
+                  </button>
+                )}
               </div>
 
               <div className="flex items-center gap-2.5 flex-wrap">
-                {product.colors.map((c) => {
-                  const isBlack = c.toLowerCase().includes('hitam') || c.toLowerCase().includes('black');
+                {product.sizes.map((s) => {
+                  const isSelected = selectedSize === s;
                   return (
                     <button
-                      key={c}
-                      onClick={() => setSelectedColor(c)}
-                      className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
-                        selectedColor === c
-                          ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400'
-                          : 'bg-[#141b2d] text-gray-300 hover:bg-white/10 hover:text-white border border-white/10'
+                      key={s}
+                      onClick={() => setSelectedSize(s)}
+                      className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold font-mono transition-all duration-200 cursor-pointer ${
+                        isSelected
+                          ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400 scale-[1.02]'
+                          : 'bg-[#141b2d] text-gray-300 hover:border-blue-400/60 hover:text-white border border-white/10'
                       }`}
                     >
-                      <span
-                        className={`w-3.5 h-3.5 rounded-full border ${
-                          isBlack
-                            ? 'bg-black border-white/50 shadow-sm'
-                            : 'bg-white border-black/40 shadow-sm'
-                        }`}
-                      />
-                      <span>{c}</span>
+                      {s}
                     </button>
                   );
                 })}
               </div>
-            </div>
-          )}
-
-          {/* Size Selector */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">
-                {product.category === 'Stiker' ? 'Pilihan Paket:' : 'Pilih Ukuran:'}
-              </span>
-              {product.category !== 'Stiker' && (
-                <button
-                  onClick={() => setIsSizeChartOpen(true)}
-                  className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Ruler className="w-3.5 h-3.5" />
-                  <span>Panduan Ukuran (Size Chart)</span>
-                </button>
-              )}
-            </div>
-
-            <div className="flex items-center gap-2.5 flex-wrap">
-              {product.sizes.map((s) => (
-                <button
-                  key={s}
-                  onClick={() => setSelectedSize(s)}
-                  className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold font-mono transition-all duration-200 ${
-                    selectedSize === s
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400'
-                      : 'bg-[#141b2d] text-gray-300 hover:bg-white/10 hover:text-white border border-white/10'
-                  }`}
-                >
-                  {s}
-                </button>
-              ))}
             </div>
           </div>
 
@@ -269,7 +308,7 @@ export const ProductDetailPage: React.FC = () => {
               <div className="flex items-center rounded-xl bg-white/5 border border-white/10 p-1">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   aria-label="Kurangi jumlah"
                 >
                   <Minus className="w-4 h-4" />
@@ -279,7 +318,7 @@ export const ProductDetailPage: React.FC = () => {
                 </span>
                 <button
                   onClick={() => setQuantity(Math.min(product.stockCount, quantity + 1))}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   aria-label="Tambah jumlah"
                 >
                   <Plus className="w-4 h-4" />
@@ -306,19 +345,56 @@ export const ProductDetailPage: React.FC = () => {
               </a>
             )}
 
-            <a
-              href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400"
-            >
-              <MessageCircle className="w-5 h-5 fill-current" />
-              <span>Order via WhatsApp CS</span>
-            </a>
+            {isReadyToOrder ? (
+              <a
+                href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-400 shadow-xl shadow-emerald-950/60 hover:-translate-y-0.5"
+              >
+                <MessageCircle className="w-5 h-5 fill-current" />
+                <span>Order via WhatsApp CS</span>
+              </a>
+            ) : (
+              <button
+                type="button"
+                onClick={scrollToOptions}
+                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-slate-850 hover:bg-slate-800 text-gray-300 font-bold text-sm border border-slate-700/80 transition-all cursor-pointer shadow-sm group"
+              >
+                <MessageCircle className="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors" />
+                <span>
+                  {!isColorSelected && !isSizeSelected
+                    ? 'Pilih Warna & Ukuran Terlebih Dahulu'
+                    : !isColorSelected
+                    ? 'Pilih Warna Kaos Terlebih Dahulu'
+                    : 'Pilih Ukuran Kaos Terlebih Dahulu'}
+                </span>
+              </button>
+            )}
 
-            <p className="text-[11px] text-center text-gray-400">
-              Pemesanan WhatsApp otomatis menyusun rincian: {product.name} {selectedColor ? `(Warna ${selectedColor}, Size ${selectedSize}, ${quantity} pcs)` : `(Size ${selectedSize}, ${quantity} pcs)`}.
-            </p>
+            {!isReadyToOrder ? (
+              <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs text-center flex items-center justify-center gap-2">
+                <span className="text-base shrink-0">⚠️</span>
+                <span>
+                  Harap tentukan{' '}
+                  <strong className="text-amber-200 underline">
+                    {!isColorSelected && !isSizeSelected
+                      ? 'warna kaos & ukuran'
+                      : !isColorSelected
+                      ? 'warna kaos'
+                      : 'ukuran'}
+                  </strong>{' '}
+                  di atas terlebih dahulu sebelum klik pembelian ke WhatsApp.
+                </span>
+              </div>
+            ) : (
+              <p className="text-[11px] text-center text-gray-400">
+                Pemesanan WhatsApp otomatis menyusun rincian: {product.name}{' '}
+                {selectedColor
+                  ? `(Warna ${selectedColor}, Size ${selectedSize}, ${quantity} pcs)`
+                  : `(Size ${selectedSize}, ${quantity} pcs)`}.
+              </p>
+            )}
           </div>
 
           {/* Trust Guarantees */}
@@ -415,22 +491,38 @@ export const ProductDetailPage: React.FC = () => {
         <div className="flex items-center justify-between gap-3">
           <div>
             <span className="text-[10px] text-gray-400 block leading-tight">
-              Total ({quantity} pcs {selectedColor ? `• ${selectedColor}` : ''}):
+              Total ({quantity} pcs {selectedColor ? `• ${selectedColor}` : ''} {selectedSize ? `• ${selectedSize}` : ''}):
             </span>
             <span className="text-base font-black text-white font-mono">
               {formatPriceIDR(product.price * quantity)}
             </span>
           </div>
 
-          <a
-            href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
-          >
-            <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-            <span>Order WA Sekarang</span>
-          </a>
+          {isReadyToOrder ? (
+            <a
+              href={createWhatsAppOrderUrl(product.name, selectedSize, quantity, selectedColor)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
+            >
+              <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+              <span>Order WA Sekarang</span>
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={scrollToOptions}
+              className="flex-1 flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl bg-slate-800 text-amber-300 font-bold text-xs border border-amber-500/40 cursor-pointer shadow-sm active:scale-95 transition-all"
+            >
+              <span>
+                {!isColorSelected && !isSizeSelected
+                  ? 'Pilih Warna & Size Dulu'
+                  : !isColorSelected
+                  ? 'Pilih Warna Kaos Dulu'
+                  : 'Pilih Ukuran Dulu'}
+              </span>
+            </button>
+          )}
         </div>
       </div>
 
