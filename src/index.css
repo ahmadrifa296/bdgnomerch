@@ -3,8 +3,15 @@
 @layer base {
   * {
     border-color: rgba(45, 85, 160, 0.22);
+    -webkit-tap-highlight-color: transparent;
   }
   
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
   body {
     background-color: #091222;
     background-image: 
@@ -16,6 +23,12 @@
     color: #f1f5f9;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent tap highlight and accidental text selection on Android interactive elements */
+  button, a, nav {
+    -webkit-touch-callout: none;
   }
 
   /* R-39: Cursor pointer for all enabled interactive controls */

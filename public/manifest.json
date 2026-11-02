@@ -1,0 +1,25 @@
+{
+  "short_name": "BDG BOYS",
+  "name": "BDG BOYS MERCH - Official Store",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#070e1c",
+  "theme_color": "#070e1c",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "id",
+  "scope": "/"
+}

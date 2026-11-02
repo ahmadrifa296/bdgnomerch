@@ -408,7 +408,10 @@ export const ProductDetailPage: React.FC = () => {
       )}
 
       {/* Mobile Sticky Bottom Order Bar (Phone-First UX) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#070e1c]/95 backdrop-blur-lg border-t border-blue-900/40 p-3 shadow-2xl safe-area-inset-bottom">
+      <div 
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#070e1c]/95 backdrop-blur-lg border-t border-blue-900/40 px-3 pt-3 shadow-2xl"
+        style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 12px)' }}
+      >
         <div className="flex items-center justify-between gap-3">
           <div>
             <span className="text-[10px] text-gray-400 block leading-tight">
