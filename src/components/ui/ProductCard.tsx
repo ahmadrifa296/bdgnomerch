@@ -62,14 +62,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </Link>
 
       {/* BDG Product Details */}
-      <div className="p-3 sm:p-3.5 flex flex-col flex-1 justify-between gap-2">
+      <div className="p-2.5 sm:p-3.5 flex flex-col flex-1 justify-between gap-1.5 sm:gap-2">
         <div>
           {/* Title with BDG Brand Tag */}
           <Link 
             to={`/product/${product.id}`} 
             className="hover:text-blue-400 transition-colors focus:outline-none block"
           >
-            <h3 className="font-semibold text-white text-xs sm:text-[13px] leading-snug line-clamp-2 min-h-[34px] sm:min-h-[38px] group-hover:text-blue-300 transition-colors">
+            <h3 className="font-semibold text-white text-xs sm:text-[13px] leading-snug line-clamp-2 min-h-[32px] sm:min-h-[38px] group-hover:text-blue-300 transition-colors">
               <span className="inline-flex items-center px-1.5 py-0.5 mr-1.5 rounded bg-blue-900/40 text-blue-300 border border-blue-500/30 text-[9px] font-black uppercase tracking-wider align-middle">
                 BDG
               </span>
@@ -78,8 +78,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </Link>
 
           {/* Authentic Price Section (Streetwear Terrace Style) */}
-          <div className="mt-2 flex items-baseline gap-2 flex-wrap">
-            <span className="text-base sm:text-lg font-black text-white font-['Outfit'] tracking-tight">
+          <div className="mt-1.5 sm:mt-2 flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
+            <span className="text-sm sm:text-lg font-black text-white font-['Outfit'] tracking-tight">
               {formatPriceIDR(product.price)}
             </span>
 

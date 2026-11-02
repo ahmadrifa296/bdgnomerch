@@ -36,14 +36,14 @@ export const AboutPage: React.FC = () => {
             Seluruh proses potong pola, jahit rantai, dan sablon dikerjakan langsung oleh para tenaga penjahit berpengalaman di kawasan industri kreatif Bandung.
           </p>
 
-          <div className="pt-2 grid grid-cols-2 gap-3 text-white">
-            <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
-              <span className="block text-xl font-bold text-blue-400 font-mono">Cotton Combed 24s</span>
-              <span className="text-xs text-gray-400">Kain adem & nyaman dipakai</span>
+          <div className="pt-2 grid grid-cols-2 gap-2 sm:gap-3 text-white">
+            <div className="p-3 sm:p-4 rounded-xl bg-[#0d121f] border border-white/10">
+              <span className="block text-sm sm:text-xl font-bold text-blue-400 font-mono">Cotton 24s</span>
+              <span className="text-[10px] sm:text-xs text-gray-400">Kain adem & nyaman</span>
             </div>
-            <div className="p-4 rounded-xl bg-[#0d121f] border border-white/10">
-              <span className="block text-xl font-bold text-amber-400 font-mono">Vinyl Die-Cut</span>
-              <span className="text-xs text-gray-400">Laminasi doff tahan cuaca & air</span>
+            <div className="p-3 sm:p-4 rounded-xl bg-[#0d121f] border border-white/10">
+              <span className="block text-sm sm:text-xl font-bold text-amber-400 font-mono">Vinyl Die-Cut</span>
+              <span className="text-[10px] sm:text-xs text-gray-400">Laminasi doff tahan cuaca</span>
             </div>
           </div>
         </div>

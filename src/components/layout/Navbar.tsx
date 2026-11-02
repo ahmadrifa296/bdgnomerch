@@ -42,21 +42,21 @@ export const Navbar: React.FC = () => {
           : 'bg-[#091222]/80 backdrop-blur-sm border-b border-blue-900/20 py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group focus:outline-none">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group focus:outline-none min-w-0">
             <img
               src="/logo.jpg"
               alt="BDG BOYS MERCH Official Logo"
-              className="w-10 h-10 rounded-full object-cover border-2 border-blue-400/40 shadow-md group-hover:scale-105 transition-transform duration-200"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-blue-400/40 shadow-md group-hover:scale-105 transition-transform duration-200 shrink-0"
             />
-            <div className="flex flex-col">
-              <span className="font-black tracking-tight text-lg sm:text-xl text-white group-hover:text-blue-300 transition-colors uppercase font-['Outfit']">
+            <div className="flex flex-col min-w-0">
+              <span className="font-black tracking-tight text-base sm:text-xl text-white group-hover:text-blue-300 transition-colors uppercase font-['Outfit'] truncate">
                 {brandName}
               </span>
-              <span className="text-[10px] tracking-widest text-blue-300/80 uppercase -mt-1 font-semibold flex items-center gap-1 font-mono">
-                Bandung Pride <ShieldCheck className="w-3 h-3 text-blue-400 inline" />
+              <span className="text-[9px] sm:text-[10px] tracking-wider text-blue-300/80 uppercase -mt-0.5 font-semibold flex items-center gap-1 font-mono">
+                Bandung Pride <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-blue-400 inline" />
               </span>
             </div>
           </Link>
@@ -114,33 +114,33 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <div className="flex md:hidden items-center gap-2">
+          {/* Mobile Action Buttons */}
+          <div className="flex md:hidden items-center gap-1 sm:gap-2 shrink-0">
             <a
               href={getShopeeStoreUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-orange-600/20 text-orange-400 border border-orange-500/30"
+              className="p-1.5 sm:p-2 rounded-lg bg-orange-600/20 text-orange-400 border border-orange-500/30"
               aria-label="Shopee Store"
               title="Shopee Official"
             >
-              <ShopeeIcon className="w-5 h-5 fill-current" />
+              <ShopeeIcon className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
             </a>
             <a
               href={getWhatsAppGeneralUrl('Halo Admin BDG BOYS MERCH!')}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-green-600/20 text-green-400 border border-green-500/30"
+              className="p-1.5 sm:p-2 rounded-lg bg-green-600/20 text-green-400 border border-green-500/30"
               aria-label="WhatsApp"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              className="p-1.5 sm:p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>

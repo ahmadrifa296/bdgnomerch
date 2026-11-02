@@ -170,16 +170,16 @@ export const ProductDetailPage: React.FC = () => {
           </div>
 
           {/* Pricing */}
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-baseline gap-4">
-            <span className="text-3xl font-black text-white font-['Outfit']">
+          <div className="p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 flex items-baseline gap-2.5 sm:gap-4 flex-wrap">
+            <span className="text-2xl sm:text-3xl font-black text-white font-['Outfit']">
               {formatPriceIDR(product.price)}
             </span>
             {product.originalPrice && (
               <>
-                <span className="text-sm text-gray-500 line-through">
+                <span className="text-xs sm:text-sm text-gray-500 line-through">
                   {formatPriceIDR(product.originalPrice)}
                 </span>
-                <span className="px-2 py-0.5 rounded-md bg-rose-600/30 text-rose-400 text-xs font-bold border border-rose-500/30">
+                <span className="px-2 py-0.5 rounded-md bg-rose-600/30 text-rose-400 text-[10px] sm:text-xs font-bold border border-rose-500/30">
                   Hemat {discountPercent}%
                 </span>
               </>
@@ -205,7 +205,7 @@ export const ProductDetailPage: React.FC = () => {
                     <button
                       key={c}
                       onClick={() => setSelectedColor(c)}
-                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                      className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                         selectedColor === c
                           ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400'
                           : 'bg-[#141b2d] text-gray-300 hover:bg-white/10 hover:text-white border border-white/10'
@@ -248,7 +248,7 @@ export const ProductDetailPage: React.FC = () => {
                 <button
                   key={s}
                   onClick={() => setSelectedSize(s)}
-                  className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-mono transition-all duration-200 ${
+                  className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold font-mono transition-all duration-200 ${
                     selectedSize === s
                       ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40 border border-blue-400'
                       : 'bg-[#141b2d] text-gray-300 hover:bg-white/10 hover:text-white border border-white/10'
